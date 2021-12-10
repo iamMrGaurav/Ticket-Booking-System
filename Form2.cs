@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CourseworkAD
 {
-    public partial class mainForm : Form
+    public partial class home : Form
     {
-        public mainForm()
+        public home()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
