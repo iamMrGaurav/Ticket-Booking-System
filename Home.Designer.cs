@@ -31,11 +31,14 @@ namespace CourseworkAD
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.weeklyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dailyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +46,8 @@ namespace CourseworkAD
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.openToolStripMenuItem,
-            this.entryToolStripMenuItem});
+            this.entryToolStripMenuItem,
+            this.reportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 25);
@@ -60,22 +64,6 @@ namespace CourseworkAD
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(52, 21);
             this.openToolStripMenuItem.Text = "Open";
-            // 
-            // entryToolStripMenuItem
-            // 
-            this.entryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.entryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.entryToolStripMenuItem.Name = "entryToolStripMenuItem";
-            this.entryToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
-            this.entryToolStripMenuItem.Text = "View";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Tickets";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // entryToolStripMenuItem1
             // 
@@ -94,6 +82,43 @@ namespace CourseworkAD
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeToolStripMenuItem.Text = "Close";
+            // 
+            // entryToolStripMenuItem
+            // 
+            this.entryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.entryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entryToolStripMenuItem.Name = "entryToolStripMenuItem";
+            this.entryToolStripMenuItem.Size = new System.Drawing.Size(47, 21);
+            this.entryToolStripMenuItem.Text = "View";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "Tickets";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.weeklyReportToolStripMenuItem,
+            this.dailyReportToolStripMenuItem});
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 21);
+            this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // weeklyReportToolStripMenuItem
+            // 
+            this.weeklyReportToolStripMenuItem.Name = "weeklyReportToolStripMenuItem";
+            this.weeklyReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.weeklyReportToolStripMenuItem.Text = "Weekly Report";
+            // 
+            // dailyReportToolStripMenuItem
+            // 
+            this.dailyReportToolStripMenuItem.Name = "dailyReportToolStripMenuItem";
+            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dailyReportToolStripMenuItem.Text = "Daily Report";
             // 
             // Home
             // 
@@ -122,5 +147,8 @@ namespace CourseworkAD
         private System.Windows.Forms.ToolStripMenuItem entryToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem weeklyReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dailyReportToolStripMenuItem;
     }
 }
