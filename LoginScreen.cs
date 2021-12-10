@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace CourseworkAD
 {
-    public partial class Home : Form
+    public partial class LoginScreen : Form
     {
-        public Home()
+        public LoginScreen()
         {
             InitializeComponent();
         }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        Home obj;
+        private void loginButton_Click(object sender, EventArgs e)
         {
-
+            obj = new Home();
+            obj.Show();
+            this.Hide();
         }
     }
 }

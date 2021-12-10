@@ -16,6 +16,7 @@ namespace CourseworkAD
         public mainForm()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -32,14 +33,37 @@ namespace CourseworkAD
         {
 
         }
-        Home obj;
+        
         private void loginButton_Click(object sender, EventArgs e)
         {
-            obj = new Home();
-            obj.Show();
-            this.Hide();
+            
             
 
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+        int value = 0;
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (value < 100)
+            {
+                value++;
+                progressBar1.Value = value;
+            }
+            else {
+                timer1.Stop();
+                new LoginScreen().Show();
+                this.Hide();
+
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

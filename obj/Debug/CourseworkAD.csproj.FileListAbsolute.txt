@@ -9,3 +9,4 @@ F:\Cw_Ad\obj\Debug\CourseworkAD.csproj.CoreCompileInputs.cache
 F:\Cw_Ad\obj\Debug\CourseworkAD.exe
 F:\Cw_Ad\obj\Debug\CourseworkAD.pdb
 F:\Cw_Ad\obj\Debug\CourseworkAD.Home.resources
+F:\Cw_Ad\obj\Debug\CourseworkAD.LoginScreen.resources
