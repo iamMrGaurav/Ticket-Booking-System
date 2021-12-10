@@ -1,7 +1,7 @@
 ﻿
 namespace CourseworkAD
 {
-    partial class home
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,13 @@ namespace CourseworkAD
         {
             this.SuspendLayout();
             // 
-            // home
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "home";
+            this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.ResumeLayout(false);
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace CourseworkAD
 {
@@ -19,6 +20,26 @@ namespace CourseworkAD
 
         private void label3_Click(object sender, EventArgs e)
         {
+
+        }
+        
+        private void skipButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        Home obj;
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            obj = new Home();
+            obj.Show();
+            this.Hide();
+            
+
 
         }
     }

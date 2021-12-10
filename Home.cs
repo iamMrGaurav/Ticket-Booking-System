@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CourseworkAD
 {
-    public partial class home : Form
+    public partial class Home : Form
     {
-        public home()
+        public Home()
         {
             InitializeComponent();
         }

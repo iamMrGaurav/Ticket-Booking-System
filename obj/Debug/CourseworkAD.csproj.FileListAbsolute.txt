@@ -3,9 +3,9 @@ F:\Cw_Ad\bin\Debug\CourseworkAD.exe
 F:\Cw_Ad\bin\Debug\CourseworkAD.pdb
 F:\Cw_Ad\obj\Debug\CourseworkAD.csproj.AssemblyReference.cache
 F:\Cw_Ad\obj\Debug\CourseworkAD.mainForm.resources
-F:\Cw_Ad\obj\Debug\CourseworkAD.home.resources
 F:\Cw_Ad\obj\Debug\CourseworkAD.Properties.Resources.resources
 F:\Cw_Ad\obj\Debug\CourseworkAD.csproj.GenerateResource.cache
 F:\Cw_Ad\obj\Debug\CourseworkAD.csproj.CoreCompileInputs.cache
 F:\Cw_Ad\obj\Debug\CourseworkAD.exe
 F:\Cw_Ad\obj\Debug\CourseworkAD.pdb
+F:\Cw_Ad\obj\Debug\CourseworkAD.Home.resources
