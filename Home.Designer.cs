@@ -39,6 +39,7 @@ namespace CourseworkAD
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.weeklyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dailyReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.homePanel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,17 +71,18 @@ namespace CourseworkAD
             this.entryToolStripMenuItem1.Name = "entryToolStripMenuItem1";
             this.entryToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.entryToolStripMenuItem1.Text = "Entry";
+            this.entryToolStripMenuItem1.Click += new System.EventHandler(this.entryToolStripMenuItem1_Click);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(108, 22);
             this.exitToolStripMenuItem1.Text = "Exit";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.closeToolStripMenuItem.Text = "Close";
             // 
             // entryToolStripMenuItem
@@ -95,7 +97,7 @@ namespace CourseworkAD
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.exitToolStripMenuItem.Text = "Tickets";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -111,14 +113,23 @@ namespace CourseworkAD
             // weeklyReportToolStripMenuItem
             // 
             this.weeklyReportToolStripMenuItem.Name = "weeklyReportToolStripMenuItem";
-            this.weeklyReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.weeklyReportToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.weeklyReportToolStripMenuItem.Text = "Weekly Report";
             // 
             // dailyReportToolStripMenuItem
             // 
             this.dailyReportToolStripMenuItem.Name = "dailyReportToolStripMenuItem";
-            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.dailyReportToolStripMenuItem.Text = "Daily Report";
+            // 
+            // homePanel
+            // 
+            this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homePanel.Location = new System.Drawing.Point(0, 25);
+            this.homePanel.Name = "homePanel";
+            this.homePanel.Size = new System.Drawing.Size(800, 425);
+            this.homePanel.TabIndex = 1;
+            this.homePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.homePanel_Paint);
             // 
             // Home
             // 
@@ -126,11 +137,13 @@ namespace CourseworkAD
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.homePanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -150,5 +163,6 @@ namespace CourseworkAD
         private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem weeklyReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dailyReportToolStripMenuItem;
+        private System.Windows.Forms.Panel homePanel;
     }
 }
