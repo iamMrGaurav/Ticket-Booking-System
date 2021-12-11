@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DailyReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyReportForm.Designer.cs">
+      <DependentUpon>DailyReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EntryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EntryForm.Designer.cs">
       <DependentUpon>EntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExitForm.Designer.cs">
+      <DependentUpon>ExitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalVariable.cs" />
     <Compile Include="SplashScreen.cs">
@@ -73,6 +85,27 @@
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketForm.Designer.cs">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeeklyReportForm.Designer.cs">
+      <DependentUpon>WeeklyReportForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DailyReportForm.resx">
+      <DependentUpon>DailyReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntryForm.resx">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExitForm.resx">
+      <DependentUpon>ExitForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +123,12 @@
     </Compile>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketForm.resx">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeeklyReportForm.resx">
+      <DependentUpon>WeeklyReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
