@@ -19,7 +19,7 @@ namespace CourseworkAD
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            loadform(new TicketForm());
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -52,6 +52,21 @@ namespace CourseworkAD
         private void entryToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             loadform(new EntryForm());
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new ExitForm());
+        }
+
+        private void weeklyReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new WeeklyReportForm());
+        }
+
+        private void dailyReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new DailyReportForm());
         }
     }
 }
