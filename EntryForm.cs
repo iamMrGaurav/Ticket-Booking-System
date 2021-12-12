@@ -36,5 +36,10 @@ namespace CourseworkAD
                 categoryLabel.Text = "Weekday";
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

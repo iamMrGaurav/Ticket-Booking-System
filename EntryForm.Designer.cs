@@ -144,9 +144,10 @@ namespace CourseworkAD
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(3, 1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(187, 45);
+            this.label4.Size = new System.Drawing.Size(152, 45);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Entry Form";
+            this.label4.Text = "Fill Form";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 
@@ -202,9 +203,9 @@ namespace CourseworkAD
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(2, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(188, 37);
+            this.label8.Size = new System.Drawing.Size(150, 37);
             this.label8.TabIndex = 12;
-            this.label8.Text = "_________";
+            this.label8.Text = "_______";
             // 
             // label9
             // 
