@@ -49,10 +49,10 @@ namespace CourseworkAD
             this.ticketMenu,
             this.weeklyReportToolStripMenuItem,
             this.dailyReportToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 402);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 471);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(250, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(933, 48);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -60,44 +60,51 @@ namespace CourseworkAD
             // 
             this.homePanel.BackColor = System.Drawing.Color.Black;
             this.homePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.homePanel.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homePanel.Location = new System.Drawing.Point(0, 0);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(800, 402);
+            this.homePanel.Size = new System.Drawing.Size(933, 471);
             this.homePanel.TabIndex = 1;
             this.homePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.homePanel_Paint);
             // 
             // entryToolStripMenuItem
             // 
+            this.entryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.entryToolStripMenuItem.Name = "entryToolStripMenuItem";
-            this.entryToolStripMenuItem.Size = new System.Drawing.Size(46, 44);
+            this.entryToolStripMenuItem.Size = new System.Drawing.Size(49, 44);
             this.entryToolStripMenuItem.Text = "Entry";
             this.entryToolStripMenuItem.Click += new System.EventHandler(this.entryToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 44);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(40, 44);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
             // ticketMenu
             // 
+            this.ticketMenu.BackColor = System.Drawing.Color.White;
+            this.ticketMenu.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ticketMenu.Name = "ticketMenu";
-            this.ticketMenu.Size = new System.Drawing.Size(55, 44);
+            this.ticketMenu.Size = new System.Drawing.Size(59, 44);
             this.ticketMenu.Text = "Tickets";
             this.ticketMenu.Click += new System.EventHandler(this.ticketsToolStripMenuItem_Click);
             // 
             // weeklyReportToolStripMenuItem
             // 
+            this.weeklyReportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weeklyReportToolStripMenuItem.Name = "weeklyReportToolStripMenuItem";
-            this.weeklyReportToolStripMenuItem.Size = new System.Drawing.Size(95, 44);
+            this.weeklyReportToolStripMenuItem.Size = new System.Drawing.Size(105, 44);
             this.weeklyReportToolStripMenuItem.Text = "Weekly Report";
             this.weeklyReportToolStripMenuItem.Click += new System.EventHandler(this.weeklyReportToolStripMenuItem_Click);
             // 
             // dailyReportToolStripMenuItem
             // 
+            this.dailyReportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dailyReportToolStripMenuItem.Name = "dailyReportToolStripMenuItem";
-            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(83, 44);
+            this.dailyReportToolStripMenuItem.Size = new System.Drawing.Size(92, 44);
             this.dailyReportToolStripMenuItem.Text = "Daily Report";
             this.dailyReportToolStripMenuItem.Click += new System.EventHandler(this.dailyReportToolStripMenuItem_Click);
             // 
@@ -106,10 +113,12 @@ namespace CourseworkAD
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(933, 519);
             this.Controls.Add(this.homePanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(949, 558);
+            this.MinimumSize = new System.Drawing.Size(949, 558);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";

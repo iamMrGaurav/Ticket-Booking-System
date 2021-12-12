@@ -118,6 +118,7 @@ namespace CourseworkAD
             this.skipButton.TabIndex = 18;
             this.skipButton.Text = "Skip";
             this.skipButton.UseVisualStyleBackColor = false;
+            this.skipButton.Click += new System.EventHandler(this.skipButton_Click);
             // 
             // loginButton
             // 

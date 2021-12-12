@@ -41,5 +41,11 @@ namespace CourseworkAD
            
             
         }
+
+        private void skipButton_Click(object sender, EventArgs e)
+        {
+            obj.Show();
+            this.Hide();
+        }
     }
 }

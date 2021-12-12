@@ -24,7 +24,17 @@ namespace CourseworkAD
 
         private void EntryForm_Load(object sender, EventArgs e)
         {
-
+            DateTime date = DateTime.Now;
+            String day = date.DayOfWeek.ToString();
+            Console.WriteLine(day);
+            if (day == "Saturday")
+            {
+                categoryLabel.Text = "Holiday";
+            }
+            else
+            {
+                categoryLabel.Text = "Weekday";
+            }
         }
     }
 }
