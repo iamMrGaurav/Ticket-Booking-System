@@ -81,7 +81,6 @@ namespace CourseworkAD
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label28);
             this.panel2.Controls.Add(this.label27);
             this.panel2.Controls.Add(this.label26);
             this.panel2.Controls.Add(this.label25);
@@ -111,7 +110,7 @@ namespace CourseworkAD
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(144, 30);
+            this.panel2.Location = new System.Drawing.Point(145, 49);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(530, 338);
             this.panel2.TabIndex = 0;
@@ -132,7 +131,7 @@ namespace CourseworkAD
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial Narrow", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(191, 9);
+            this.label28.Location = new System.Drawing.Point(333, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(126, 33);
             this.label28.TabIndex = 29;
@@ -352,7 +351,7 @@ namespace CourseworkAD
             // 
             // idTextBox
             // 
-            this.idTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.idTextBox.BackColor = System.Drawing.Color.White;
             this.idTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idTextBox.Location = new System.Drawing.Point(175, 59);
@@ -424,6 +423,7 @@ namespace CourseworkAD
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.label28);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -445,6 +445,7 @@ namespace CourseworkAD
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

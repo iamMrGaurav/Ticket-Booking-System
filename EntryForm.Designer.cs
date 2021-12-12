@@ -30,7 +30,7 @@ namespace CourseworkAD
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ticketData = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.idNumericUpDownValue = new System.Windows.Forms.NumericUpDown();
@@ -48,7 +48,7 @@ namespace CourseworkAD
             this.label10 = new System.Windows.Forms.Label();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.idNumericUpDownValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countNumericUpDownValue)).BeginInit();
             this.SuspendLayout();
@@ -56,21 +56,21 @@ namespace CourseworkAD
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(39)))), ((int)(((byte)(44)))));
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.ticketData);
             this.panel1.Location = new System.Drawing.Point(264, 108);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(524, 230);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // ticketData
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(524, 182);
-            this.dataGridView1.TabIndex = 0;
+            this.ticketData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
+            this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ticketData.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ticketData.Location = new System.Drawing.Point(0, 48);
+            this.ticketData.Name = "ticketData";
+            this.ticketData.Size = new System.Drawing.Size(524, 182);
+            this.ticketData.TabIndex = 0;
             // 
             // label1
             // 
@@ -269,7 +269,7 @@ namespace CourseworkAD
             this.Text = "EntryForm";
             this.Load += new System.EventHandler(this.EntryForm_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.idNumericUpDownValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countNumericUpDownValue)).EndInit();
             this.ResumeLayout(false);
@@ -289,7 +289,7 @@ namespace CourseworkAD
         private System.Windows.Forms.ComboBox typeValue;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ticketData;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

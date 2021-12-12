@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,28 @@ namespace CourseworkAD
              
             }
 
+
+            
+            string[] ticketRates = File.ReadAllLines("F:\\Cw_Ad\\TicketRate.csv");
+            GlobalClass.tickets.Clear();
+
+            for (int i = 0; i < ticketRates.Length; i++) {
+
+               
+                var row = ticketRates[i].Split(',');
+                TicketModel ticketModel = new TicketModel
+                {
+                    id = Convert.ToInt32(row[0]),
+                    category = (row[1]),
+                    type = (row[2]),
+                    rateOneHr = Convert.ToInt32(row[3]),
+                    rateTwoHr = Convert.ToInt32(row[4]),
+                    rateThreeHr = Convert.ToInt32(row[5]),
+                    rateFourHr = Convert.ToInt32(row[6]),
+                    rateWholeDay = Convert.ToInt32(row[7])
+                };
+                GlobalClass.tickets.Add(ticketModel);
+            }
 
         }
 
