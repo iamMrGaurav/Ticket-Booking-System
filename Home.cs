@@ -87,5 +87,10 @@ namespace CourseworkAD
         {
             loadform(new DailyReportForm());
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
