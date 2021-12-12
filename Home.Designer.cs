@@ -88,8 +88,9 @@ namespace CourseworkAD
             // 
             this.ticketMenu.BackColor = System.Drawing.Color.White;
             this.ticketMenu.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketMenu.Image = ((System.Drawing.Image)(resources.GetObject("ticketMenu.Image")));
             this.ticketMenu.Name = "ticketMenu";
-            this.ticketMenu.Size = new System.Drawing.Size(60, 55);
+            this.ticketMenu.Size = new System.Drawing.Size(76, 55);
             this.ticketMenu.Text = "Tickets";
             this.ticketMenu.Click += new System.EventHandler(this.ticketsToolStripMenuItem_Click);
             // 

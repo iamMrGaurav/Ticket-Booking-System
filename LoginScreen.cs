@@ -47,5 +47,10 @@ namespace CourseworkAD
             obj.Show();
             this.Hide();
         }
+
+        private void LoginScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
