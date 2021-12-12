@@ -49,17 +49,17 @@ namespace CourseworkAD
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(349, 455);
+            this.panel1.Size = new System.Drawing.Size(428, 455);
             this.panel1.TabIndex = 13;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-207, 133);
+            this.pictureBox1.Location = new System.Drawing.Point(-177, 134);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(578, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -98,7 +98,7 @@ namespace CourseworkAD
             // 
             // passTextBox
             // 
-            this.passTextBox.BackColor = System.Drawing.Color.Silver;
+            this.passTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(219)))), ((int)(((byte)(225)))));
             this.passTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passTextBox.Location = new System.Drawing.Point(541, 247);
             this.passTextBox.Name = "passTextBox";
@@ -108,13 +108,13 @@ namespace CourseworkAD
             // 
             // skipButton
             // 
-            this.skipButton.BackColor = System.Drawing.Color.Black;
+            this.skipButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
             this.skipButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.skipButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.skipButton.ForeColor = System.Drawing.Color.White;
+            this.skipButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.skipButton.Location = new System.Drawing.Point(675, 403);
             this.skipButton.Name = "skipButton";
-            this.skipButton.Size = new System.Drawing.Size(115, 34);
+            this.skipButton.Size = new System.Drawing.Size(89, 34);
             this.skipButton.TabIndex = 18;
             this.skipButton.Text = "Skip";
             this.skipButton.UseVisualStyleBackColor = false;
@@ -122,10 +122,10 @@ namespace CourseworkAD
             // 
             // loginButton
             // 
-            this.loginButton.BackColor = System.Drawing.Color.Black;
+            this.loginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginButton.ForeColor = System.Drawing.Color.White;
+            this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.loginButton.Location = new System.Drawing.Point(559, 310);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(88, 34);
@@ -146,7 +146,7 @@ namespace CourseworkAD
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.BackColor = System.Drawing.Color.Silver;
+            this.usernameTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(219)))), ((int)(((byte)(225)))));
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameTextBox.Location = new System.Drawing.Point(541, 173);
             this.usernameTextBox.Name = "usernameTextBox";
@@ -167,6 +167,7 @@ namespace CourseworkAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
