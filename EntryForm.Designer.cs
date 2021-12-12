@@ -124,6 +124,8 @@ namespace CourseworkAD
             // 
             // typeValue
             // 
+            this.typeValue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.typeValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.typeValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.typeValue.FormattingEnabled = true;
             this.typeValue.Items.AddRange(new object[] {

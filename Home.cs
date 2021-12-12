@@ -21,8 +21,12 @@ namespace CourseworkAD
         {
             loadform(new TicketForm());
         }
-
-        private void Home_Load(object sender, EventArgs e)
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            Application.Exit();
+        }
+            private void Home_Load(object sender, EventArgs e)
         {
             if (GlobalVariable.isAdmin == true)
             {
