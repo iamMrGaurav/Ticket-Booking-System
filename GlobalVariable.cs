@@ -8,6 +8,6 @@ namespace CourseworkAD
 {
     class GlobalVariable
     {
-       
+        public static bool isAdmin;
     }
 }

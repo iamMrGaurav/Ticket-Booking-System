@@ -12,16 +12,34 @@ namespace CourseworkAD
 {
     public partial class LoginScreen : Form
     {
+        Home obj = new Home();
         public LoginScreen()
         {
             InitializeComponent();
         }
-        Home obj;
+        
         private void loginButton_Click(object sender, EventArgs e)
         {
-            obj = new Home();
-            obj.Show();
-            this.Hide();
+            if (usernameTextBox.Text != "" && passTextBox.Text != "")
+            {
+
+                if (usernameTextBox.Text == "admin" && passTextBox.Text == "admin")
+                {
+
+                    GlobalVariable.isAdmin = true;
+                    obj.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Inavlid Fields");
+                }
+            }
+            else {
+                MessageBox.Show("Please Fill the empty fields");
+            }
+           
+            
         }
     }
 }

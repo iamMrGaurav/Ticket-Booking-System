@@ -24,8 +24,16 @@ namespace CourseworkAD
 
         private void Home_Load(object sender, EventArgs e)
         {
+            if (GlobalVariable.isAdmin == true)
+            {
+                ticketMenu.Enabled = true;
+            }
+            else
+            {
+                ticketMenu.Visible = false;
+             
+            }
 
-       
 
         }
 
@@ -49,14 +57,21 @@ namespace CourseworkAD
 
         }
 
-        private void entryToolStripMenuItem1_Click(object sender, EventArgs e)
+       
+
+        private void entryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new EntryForm());
         }
 
-        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             loadform(new ExitForm());
+        }
+
+        private void ticketsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new TicketForm());
         }
 
         private void weeklyReportToolStripMenuItem_Click(object sender, EventArgs e)
