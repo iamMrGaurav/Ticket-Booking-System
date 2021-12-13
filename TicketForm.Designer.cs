@@ -30,9 +30,9 @@ namespace CourseworkAD
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ticketData = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.ticketData = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketData)).BeginInit();
             this.SuspendLayout();
@@ -42,17 +42,29 @@ namespace CourseworkAD
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.ticketData);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(24, 60);
+            this.panel2.Location = new System.Drawing.Point(35, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(709, 323);
             this.panel2.TabIndex = 22;
+            // 
+            // ticketData
+            // 
+            this.ticketData.AllowUserToAddRows = false;
+            this.ticketData.AllowUserToDeleteRows = false;
+            this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ticketData.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ticketData.Location = new System.Drawing.Point(0, 51);
+            this.ticketData.Name = "ticketData";
+            this.ticketData.Size = new System.Drawing.Size(709, 272);
+            this.ticketData.TabIndex = 26;
+            this.ticketData.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketData_CellEndEdit);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(16, 11);
+            this.label2.Location = new System.Drawing.Point(294, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 25;
@@ -63,21 +75,13 @@ namespace CourseworkAD
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(662, 389);
+            this.button2.Location = new System.Drawing.Point(652, 341);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 37);
+            this.button2.Size = new System.Drawing.Size(136, 37);
             this.button2.TabIndex = 34;
-            this.button2.Text = "Get Report";
+            this.button2.Text = "Update Report";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // ticketData
-            // 
-            this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ticketData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ticketData.Location = new System.Drawing.Point(0, 51);
-            this.ticketData.Name = "ticketData";
-            this.ticketData.Size = new System.Drawing.Size(709, 272);
-            this.ticketData.TabIndex = 26;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // TicketForm
             // 

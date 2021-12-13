@@ -57,9 +57,9 @@ namespace CourseworkAD
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(39)))), ((int)(((byte)(44)))));
             this.panel1.Controls.Add(this.ticketData);
-            this.panel1.Location = new System.Drawing.Point(264, 108);
+            this.panel1.Location = new System.Drawing.Point(222, 108);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(524, 230);
+            this.panel1.Size = new System.Drawing.Size(566, 241);
             this.panel1.TabIndex = 0;
             // 
             // ticketData
@@ -67,9 +67,9 @@ namespace CourseworkAD
             this.ticketData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
             this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ticketData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ticketData.Location = new System.Drawing.Point(0, 48);
+            this.ticketData.Location = new System.Drawing.Point(0, 59);
             this.ticketData.Name = "ticketData";
-            this.ticketData.Size = new System.Drawing.Size(524, 182);
+            this.ticketData.Size = new System.Drawing.Size(566, 182);
             this.ticketData.TabIndex = 0;
             // 
             // label1
@@ -77,7 +77,7 @@ namespace CourseworkAD
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(6, 103);
+            this.label1.Location = new System.Drawing.Point(6, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 30);
             this.label1.TabIndex = 1;
@@ -88,7 +88,7 @@ namespace CourseworkAD
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 192);
+            this.label2.Location = new System.Drawing.Point(6, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 30);
             this.label2.TabIndex = 2;
@@ -97,7 +97,7 @@ namespace CourseworkAD
             // idNumericUpDownValue
             // 
             this.idNumericUpDownValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idNumericUpDownValue.Location = new System.Drawing.Point(132, 108);
+            this.idNumericUpDownValue.Location = new System.Drawing.Point(132, 85);
             this.idNumericUpDownValue.Name = "idNumericUpDownValue";
             this.idNumericUpDownValue.Size = new System.Drawing.Size(66, 22);
             this.idNumericUpDownValue.TabIndex = 3;
@@ -107,7 +107,7 @@ namespace CourseworkAD
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 256);
+            this.label3.Location = new System.Drawing.Point(6, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 30);
             this.label3.TabIndex = 4;
@@ -116,7 +116,7 @@ namespace CourseworkAD
             // countNumericUpDownValue
             // 
             this.countNumericUpDownValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countNumericUpDownValue.Location = new System.Drawing.Point(132, 266);
+            this.countNumericUpDownValue.Location = new System.Drawing.Point(132, 226);
             this.countNumericUpDownValue.Name = "countNumericUpDownValue";
             this.countNumericUpDownValue.Size = new System.Drawing.Size(66, 22);
             this.countNumericUpDownValue.TabIndex = 5;
@@ -133,7 +133,7 @@ namespace CourseworkAD
             "Adult",
             "Group",
             "Staff"});
-            this.typeValue.Location = new System.Drawing.Point(132, 198);
+            this.typeValue.Location = new System.Drawing.Point(132, 172);
             this.typeValue.Name = "typeValue";
             this.typeValue.Size = new System.Drawing.Size(73, 28);
             this.typeValue.TabIndex = 6;
@@ -170,7 +170,7 @@ namespace CourseworkAD
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(105, 106);
+            this.label5.Location = new System.Drawing.Point(105, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 24);
             this.label5.TabIndex = 9;
@@ -181,7 +181,7 @@ namespace CourseworkAD
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(105, 198);
+            this.label6.Location = new System.Drawing.Point(105, 172);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 24);
             this.label6.TabIndex = 10;
@@ -192,7 +192,7 @@ namespace CourseworkAD
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(105, 262);
+            this.label7.Location = new System.Drawing.Point(105, 222);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(16, 24);
             this.label7.TabIndex = 11;
@@ -214,7 +214,7 @@ namespace CourseworkAD
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(6, 144);
+            this.label9.Location = new System.Drawing.Point(6, 120);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 30);
             this.label9.TabIndex = 13;
@@ -225,7 +225,7 @@ namespace CourseworkAD
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(105, 150);
+            this.label10.Location = new System.Drawing.Point(105, 126);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 24);
             this.label10.TabIndex = 14;
@@ -236,7 +236,7 @@ namespace CourseworkAD
             this.categoryLabel.AutoSize = true;
             this.categoryLabel.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryLabel.ForeColor = System.Drawing.Color.White;
-            this.categoryLabel.Location = new System.Drawing.Point(127, 150);
+            this.categoryLabel.Location = new System.Drawing.Point(127, 126);
             this.categoryLabel.Name = "categoryLabel";
             this.categoryLabel.Size = new System.Drawing.Size(65, 30);
             this.categoryLabel.TabIndex = 15;

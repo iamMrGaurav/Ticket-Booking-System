@@ -26,7 +26,8 @@ namespace CourseworkAD
         {
             DateTime date = DateTime.Now;
             String day = date.DayOfWeek.ToString();
-            Console.WriteLine(day);
+            
+
             if (day == "Saturday")
             {
                 categoryLabel.Text = "Holiday";
