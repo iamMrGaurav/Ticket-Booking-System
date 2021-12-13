@@ -75,10 +75,40 @@ namespace CourseworkAD
         private void button1_Click(object sender, EventArgs e)
         {
             InsertDataIntoCsv();
+            countNumericUpDownValue.Value = 1;
 
         }
 
         public void InsertDataIntoCsv() {
+
+           
+            string type = typeValue.Text;
+            int count = Convert.ToInt32(countNumericUpDownValue.Value);
+           
+     
+
+            if (type == "Group")
+            {
+                if (count < 5)
+                {
+
+                    MessageBox.Show("Value must be greater or equal to 5");
+                }
+                else {
+
+                    addRecord();
+                }
+
+                
+            }
+            else
+            {
+                addRecord();
+            }
+
+        }
+
+        public void addRecord() {
 
             string id = idValue.Text;
             string type = typeValue.Text;
@@ -89,26 +119,10 @@ namespace CourseworkAD
             double cost = 0;
             bool hasLeft = false;
 
-            if (type.Contains("") && count.Equals(0))
-            {
-               
-                MessageBox.Show("Empty Fields Detected");
-            }
-            else if (count < 5)
-            {
-                MessageBox.Show("Value must be greater or equal to 5");
-
-            }
-            else
-            {
-                string newRecord = id + "," + category + "," + type + "," + count + "," + EntryTime + "," + ExitTime + "," + cost + "," + hasLeft + "\n";
-                File.AppendAllText("F:\\Cw_Ad\\DataRecord.csv", newRecord);
-                Console.WriteLine(newRecord);
-            }
-
-
-
-
+            string newRecord = id + "," + category + "," + type + "," + count + "," + EntryTime + "," + ExitTime + "," + cost + "," + hasLeft + "\n";
+            File.AppendAllText("F:\\Cw_Ad\\DataRecord.csv", newRecord);
+            Console.WriteLine(newRecord);
+            MessageBox.Show("Data Inserted Successfully");
 
         }
 
@@ -123,6 +137,7 @@ namespace CourseworkAD
             else {
 
                 countNumericUpDownValue.Enabled = false;
+                countNumericUpDownValue.Value = 1;
             }
         }
     }
