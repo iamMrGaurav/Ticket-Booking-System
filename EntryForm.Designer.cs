@@ -224,7 +224,7 @@ namespace CourseworkAD
             // 
             this.ticketData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
             this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ticketData.Location = new System.Drawing.Point(220, 75);
+            this.ticketData.Location = new System.Drawing.Point(211, 75);
             this.ticketData.Name = "ticketData";
             this.ticketData.Size = new System.Drawing.Size(577, 244);
             this.ticketData.TabIndex = 16;
@@ -234,11 +234,12 @@ namespace CourseworkAD
             this.idValue.AutoSize = true;
             this.idValue.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idValue.ForeColor = System.Drawing.Color.White;
-            this.idValue.Location = new System.Drawing.Point(115, 81);
+            this.idValue.Location = new System.Drawing.Point(127, 76);
             this.idValue.Name = "idValue";
             this.idValue.Size = new System.Drawing.Size(32, 30);
             this.idValue.TabIndex = 17;
             this.idValue.Text = "id";
+            this.idValue.Click += new System.EventHandler(this.idValue_Click);
             // 
             // EntryForm
             // 

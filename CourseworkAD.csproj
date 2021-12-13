@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerRecord.cs" />
+    <Compile Include="Record.cs" />
     <Compile Include="DailyReportForm.cs">
       <SubType>Form</SubType>
     </Compile>

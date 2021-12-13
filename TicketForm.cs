@@ -34,7 +34,6 @@ namespace CourseworkAD
             foreach (var ticket in GlobalClass.tickets) {
 
                 ticketData.Rows.Add(ticket.id,ticket.category,ticket.type,ticket.rateOneHr,ticket.rateTwoHr,ticket.rateThreeHr,ticket.rateFourHr,ticket.rateWholeDay);
-
             }
 
         }
@@ -52,7 +51,6 @@ namespace CourseworkAD
         {
             var updatedData = Convert.ToInt32(ticketData.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
             UpdateCSVFile(e.RowIndex, e.ColumnIndex, updatedData);
-
         }
 
         //this method update csv file edited in table

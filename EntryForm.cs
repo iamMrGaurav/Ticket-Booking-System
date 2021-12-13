@@ -29,8 +29,17 @@ namespace CourseworkAD
 
         }
 
+        public void updateId() {
+
+            string[] data = File.ReadAllLines("F:\\Cw_Ad\\DataRecord.csv");
+            int value = Convert.ToInt32(data.Length) + 1;
+            idValue.Text = value++.ToString();
+        }
+
         private void EntryForm_Load(object sender, EventArgs e)
         {
+
+            updateId();
             //This distinguis the real time date inthe  category section
             DateTime date = DateTime.Now;
             String day = date.DayOfWeek.ToString();
@@ -57,36 +66,31 @@ namespace CourseworkAD
 
             foreach (var ticket in GlobalClass.tickets)
             {
-
                 ticketData.Rows.Add(ticket.id, ticket.category, ticket.type, ticket.rateOneHr, ticket.rateTwoHr, ticket.rateThreeHr, ticket.rateFourHr, ticket.rateWholeDay);
-
             }
         }
+
 
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        //inserting data to record
-
-
-
+      
         private void button1_Click(object sender, EventArgs e)
         {
             InsertDataIntoCsv();
             countNumericUpDownValue.Value = 1;
+            updateId();
 
         }
 
         public void InsertDataIntoCsv() {
 
-           
             string type = typeValue.Text;
             int count = Convert.ToInt32(countNumericUpDownValue.Value);
            
-     
-
+    
             if (type == "Group")
             {
                 if (count < 5)
@@ -139,6 +143,11 @@ namespace CourseworkAD
                 countNumericUpDownValue.Enabled = false;
                 countNumericUpDownValue.Value = 1;
             }
+        }
+
+        private void idValue_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

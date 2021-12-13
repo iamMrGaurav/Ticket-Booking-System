@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CourseworkAD
 {
-    class CustomerRecord
+    class Record
     {
         public int idRecord { get; set; }
         public String categoryRecord { get; set; }
