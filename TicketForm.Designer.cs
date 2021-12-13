@@ -32,19 +32,18 @@ namespace CourseworkAD
             this.panel2 = new System.Windows.Forms.Panel();
             this.ticketData = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
             this.panel2.Controls.Add(this.ticketData);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(35, 12);
+            this.panel2.Location = new System.Drawing.Point(35, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(709, 323);
+            this.panel2.Size = new System.Drawing.Size(709, 314);
             this.panel2.TabIndex = 22;
             // 
             // ticketData
@@ -55,8 +54,9 @@ namespace CourseworkAD
             this.ticketData.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ticketData.Location = new System.Drawing.Point(0, 51);
             this.ticketData.Name = "ticketData";
-            this.ticketData.Size = new System.Drawing.Size(709, 272);
+            this.ticketData.Size = new System.Drawing.Size(709, 263);
             this.ticketData.TabIndex = 26;
+            this.ticketData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketData_CellContentClick);
             this.ticketData.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketData_CellEndEdit);
             // 
             // label2
@@ -64,24 +64,11 @@ namespace CourseworkAD
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(294, 13);
+            this.label2.Location = new System.Drawing.Point(322, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 25;
             this.label2.Text = "Ticket";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(652, 341);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 37);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "Update Report";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // TicketForm
             // 
@@ -89,7 +76,6 @@ namespace CourseworkAD
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TicketForm";
@@ -106,7 +92,6 @@ namespace CourseworkAD
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView ticketData;
     }
 }

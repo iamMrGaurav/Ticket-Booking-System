@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,14 @@ namespace CourseworkAD
         public EntryForm()
         {
             InitializeComponent();
+            typeValue.SelectedIndex = 0;
         }
 
+        public void checkSelectedIndex() { 
+        
+
+        
+        }
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
@@ -24,6 +31,7 @@ namespace CourseworkAD
 
         private void EntryForm_Load(object sender, EventArgs e)
         {
+            //This distinguis the real time date inthe  category section
             DateTime date = DateTime.Now;
             String day = date.DayOfWeek.ToString();
             
@@ -36,7 +44,7 @@ namespace CourseworkAD
             {
                 categoryLabel.Text = "Weekday";
             }
-
+            //This add column header in datagrid table
             ticketData.ColumnCount = 8;
             ticketData.Columns[0].Name = "ID";
             ticketData.Columns[1].Name = "Category";
@@ -58,6 +66,64 @@ namespace CourseworkAD
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //inserting data to record
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InsertDataIntoCsv();
+
+        }
+
+        public void InsertDataIntoCsv() {
+
+            string id = idValue.Text;
+            string type = typeValue.Text;
+            int count = Convert.ToInt32(countNumericUpDownValue.Value);
+            string category = categoryLabel.Text;
+            string EntryTime = DateTime.Now.ToString();
+            string ExitTime = DateTime.Now.ToString();
+            double cost = 0;
+            bool hasLeft = false;
+
+            if (type.Contains("") && count.Equals(0))
+            {
+               
+                MessageBox.Show("Empty Fields Detected");
+            }
+            else if (count < 5)
+            {
+                MessageBox.Show("Value must be greater or equal to 5");
+
+            }
+            else
+            {
+                string newRecord = id + "," + category + "," + type + "," + count + "," + EntryTime + "," + ExitTime + "," + cost + "," + hasLeft + "\n";
+                File.AppendAllText("F:\\Cw_Ad\\DataRecord.csv", newRecord);
+                Console.WriteLine(newRecord);
+            }
+
+
+
+
+
+        }
+
+        private void typeValue_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (typeValue.SelectedIndex == 2)
+            {
+                countNumericUpDownValue.Enabled = true;
+                countNumericUpDownValue.Value = 5;
+
+            }
+            else {
+
+                countNumericUpDownValue.Enabled = false;
+            }
         }
     }
 }

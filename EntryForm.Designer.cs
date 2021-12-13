@@ -29,17 +29,14 @@ namespace CourseworkAD
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ticketData = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.idNumericUpDownValue = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.countNumericUpDownValue = new System.Windows.Forms.NumericUpDown();
             this.typeValue = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.insertRecord = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,30 +44,11 @@ namespace CourseworkAD
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.categoryLabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ticketData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idNumericUpDownValue)).BeginInit();
+            this.ticketData = new System.Windows.Forms.DataGridView();
+            this.idValue = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.countNumericUpDownValue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketData)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(39)))), ((int)(((byte)(44)))));
-            this.panel1.Controls.Add(this.ticketData);
-            this.panel1.Location = new System.Drawing.Point(222, 108);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(566, 241);
-            this.panel1.TabIndex = 0;
-            // 
-            // ticketData
-            // 
-            this.ticketData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
-            this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ticketData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ticketData.Location = new System.Drawing.Point(0, 59);
-            this.ticketData.Name = "ticketData";
-            this.ticketData.Size = new System.Drawing.Size(566, 182);
-            this.ticketData.TabIndex = 0;
             // 
             // label1
             // 
@@ -94,14 +72,6 @@ namespace CourseworkAD
             this.label2.TabIndex = 2;
             this.label2.Text = "Type";
             // 
-            // idNumericUpDownValue
-            // 
-            this.idNumericUpDownValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idNumericUpDownValue.Location = new System.Drawing.Point(132, 85);
-            this.idNumericUpDownValue.Name = "idNumericUpDownValue";
-            this.idNumericUpDownValue.Size = new System.Drawing.Size(66, 22);
-            this.idNumericUpDownValue.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -115,11 +85,17 @@ namespace CourseworkAD
             // 
             // countNumericUpDownValue
             // 
+            this.countNumericUpDownValue.Enabled = false;
             this.countNumericUpDownValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countNumericUpDownValue.Location = new System.Drawing.Point(132, 226);
             this.countNumericUpDownValue.Name = "countNumericUpDownValue";
             this.countNumericUpDownValue.Size = new System.Drawing.Size(66, 22);
             this.countNumericUpDownValue.TabIndex = 5;
+            this.countNumericUpDownValue.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.countNumericUpDownValue.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // typeValue
@@ -137,6 +113,7 @@ namespace CourseworkAD
             this.typeValue.Name = "typeValue";
             this.typeValue.Size = new System.Drawing.Size(73, 28);
             this.typeValue.TabIndex = 6;
+            this.typeValue.SelectedIndexChanged += new System.EventHandler(this.typeValue_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -144,26 +121,27 @@ namespace CourseworkAD
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 1);
+            this.label4.Location = new System.Drawing.Point(372, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 45);
             this.label4.TabIndex = 7;
             this.label4.Text = "Fill Form";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // button1
+            // insertRecord
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(77, 331);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 33);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = false;
+            this.insertRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.insertRecord.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.insertRecord.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.insertRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertRecord.ForeColor = System.Drawing.Color.Black;
+            this.insertRecord.Location = new System.Drawing.Point(61, 297);
+            this.insertRecord.Name = "insertRecord";
+            this.insertRecord.Size = new System.Drawing.Size(75, 33);
+            this.insertRecord.TabIndex = 8;
+            this.insertRecord.Text = "Insert";
+            this.insertRecord.UseVisualStyleBackColor = false;
+            this.insertRecord.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -203,7 +181,7 @@ namespace CourseworkAD
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(2, 15);
+            this.label8.Location = new System.Drawing.Point(373, 21);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(150, 37);
             this.label8.TabIndex = 12;
@@ -236,11 +214,31 @@ namespace CourseworkAD
             this.categoryLabel.AutoSize = true;
             this.categoryLabel.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryLabel.ForeColor = System.Drawing.Color.White;
-            this.categoryLabel.Location = new System.Drawing.Point(127, 126);
+            this.categoryLabel.Location = new System.Drawing.Point(127, 120);
             this.categoryLabel.Name = "categoryLabel";
             this.categoryLabel.Size = new System.Drawing.Size(65, 30);
             this.categoryLabel.TabIndex = 15;
             this.categoryLabel.Text = "value";
+            // 
+            // ticketData
+            // 
+            this.ticketData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
+            this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ticketData.Location = new System.Drawing.Point(220, 75);
+            this.ticketData.Name = "ticketData";
+            this.ticketData.Size = new System.Drawing.Size(577, 244);
+            this.ticketData.TabIndex = 16;
+            // 
+            // idValue
+            // 
+            this.idValue.AutoSize = true;
+            this.idValue.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idValue.ForeColor = System.Drawing.Color.White;
+            this.idValue.Location = new System.Drawing.Point(115, 81);
+            this.idValue.Name = "idValue";
+            this.idValue.Size = new System.Drawing.Size(32, 30);
+            this.idValue.TabIndex = 17;
+            this.idValue.Text = "id";
             // 
             // EntryForm
             // 
@@ -248,48 +246,42 @@ namespace CourseworkAD
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.idValue);
+            this.Controls.Add(this.ticketData);
             this.Controls.Add(this.categoryLabel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.insertRecord);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.typeValue);
             this.Controls.Add(this.countNumericUpDownValue);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.idNumericUpDownValue);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EntryForm";
             this.Text = "EntryForm";
             this.Load += new System.EventHandler(this.EntryForm_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ticketData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idNumericUpDownValue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countNumericUpDownValue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketData)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown idNumericUpDownValue;
         private System.Windows.Forms.Label label3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.NumericUpDown countNumericUpDownValue;
         private System.Windows.Forms.ComboBox typeValue;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView ticketData;
+        private System.Windows.Forms.Button insertRecord;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -297,5 +289,7 @@ namespace CourseworkAD
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label categoryLabel;
+        private System.Windows.Forms.DataGridView ticketData;
+        private System.Windows.Forms.Label idValue;
     }
 }

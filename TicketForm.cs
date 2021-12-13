@@ -55,6 +55,7 @@ namespace CourseworkAD
 
         }
 
+        //this method update csv file edited in table
         public void UpdateCSVFile(int rowIndex, int columnIndex, int value)
         {
             string[] csvData = File.ReadAllLines("F:\\Cw_Ad\\TicketRate.csv");
@@ -94,6 +95,10 @@ namespace CourseworkAD
             File.WriteAllText("F:\\Cw_Ad\\TicketRate.csv", updatedCsv);
         }
 
+        private void ticketData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     }
 
