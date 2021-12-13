@@ -25,30 +25,47 @@ namespace CourseworkAD
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int ID = Convert.ToInt32(idTextBox.Text);
-            Record record = null;
-            foreach (Record data in GlobalVariable.records)
-            {
-                if (data.idRecord == ID)
+            try {
+                int ID = Convert.ToInt32(idTextBox.Text);
+                Record record = null;
+                foreach (Record data in GlobalVariable.records)
                 {
-                    record = data;
+                    if (data.idRecord == ID)
+                    {
+                        record = data;
+                    }
+                    
+                }
+
+                if (record != null)
+                {
+                    record.exitTimeRecord = DateTime.Now;
+                    idTextBox.Text = record.idRecord.ToString();
+                    categoryLabel.Text = record.categoryRecord;
+                    typeLabel.Text = record.typeRecord;
+                    countLabel.Text = record.countRecord.ToString();
+                    entryTimeLabel.Text = record.entryTimeRecord.ToString();
+                    exitTimeLabel.Text = record.exitTimeRecord.ToString();
+                    var duration = (record.exitTimeRecord - record.entryTimeRecord);
+                    durationLabel.Text = Convert.ToInt32(duration.TotalMinutes).ToString() + " " + "min";
+                    costLabel.Text = GetDurationCost(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("Record is Null");
+
                 }
             }
-            if (record != null)
-            {
-                record.exitTimeRecord = DateTime.Now;
-                idTextBox.Text = record.idRecord.ToString();
-                categoryLabel.Text= record.categoryRecord;
-                typeLabel.Text = record.typeRecord;
-                countLabel.Text = record.countRecord.ToString();
-                entryTimeLabel.Text = record.entryTimeRecord.ToString();
-                exitTimeLabel.Text = record.exitTimeRecord.ToString();
-                var duration = (record.exitTimeRecord - record.entryTimeRecord);
-                durationLabel.Text = Convert.ToInt32(duration.TotalMinutes).ToString() + " " + "min";
-                costLabel.Text = GetDurationCost(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString();
 
+            catch (FormatException) {
+                MessageBox.Show("Empty Fields Found");
+            
             }
         }
+
+
+
         public int GetDurationCost(int duration, string type, string category)
         {
             TicketModel ticket = null;
@@ -83,6 +100,10 @@ namespace CourseworkAD
                     rate = ticket.rateWholeDay;
                 }
 
+            }
+            else {
+                MessageBox.Show("Data unavailable");
+            
             }
             return Convert.ToInt32(rate);
         }

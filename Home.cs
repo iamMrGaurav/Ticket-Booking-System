@@ -126,9 +126,9 @@ namespace CourseworkAD
             string[] record = File.ReadAllLines("F:\\Cw_Ad\\DataRecord.csv");
             GlobalVariable.records.Clear();
 
-            for (int i = 0; i < record.Length; i++)
+            for (int initial = 0; initial < record.Length; initial++)
             {
-                var row = record[i].Split(',');
+                var row = record[initial].Split(',');
                 Record entryRecord = new Record
                 {
                     idRecord = Convert.ToInt32(row[0]),
