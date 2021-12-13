@@ -33,25 +33,22 @@ namespace CourseworkAD
             this.panel2 = new System.Windows.Forms.Panel();
             this.confirmButton = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.durationLabel = new System.Windows.Forms.Label();
+            this.exitTimeLabel = new System.Windows.Forms.Label();
+            this.entryTimeLabel = new System.Windows.Forms.Label();
+            this.costLabel = new System.Windows.Forms.Label();
+            this.categoryLabel = new System.Windows.Forms.Label();
+            this.countLabel = new System.Windows.Forms.Label();
             this.typeLabel = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -82,25 +79,22 @@ namespace CourseworkAD
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
             this.panel2.Controls.Add(this.confirmButton);
             this.panel2.Controls.Add(this.label27);
-            this.panel2.Controls.Add(this.label26);
-            this.panel2.Controls.Add(this.label25);
-            this.panel2.Controls.Add(this.label24);
-            this.panel2.Controls.Add(this.label23);
-            this.panel2.Controls.Add(this.label22);
-            this.panel2.Controls.Add(this.label21);
-            this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.durationLabel);
+            this.panel2.Controls.Add(this.exitTimeLabel);
+            this.panel2.Controls.Add(this.entryTimeLabel);
+            this.panel2.Controls.Add(this.costLabel);
+            this.panel2.Controls.Add(this.categoryLabel);
+            this.panel2.Controls.Add(this.countLabel);
             this.panel2.Controls.Add(this.typeLabel);
             this.panel2.Controls.Add(this.searchButton);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.idTextBox);
             this.panel2.Controls.Add(this.label7);
@@ -112,7 +106,7 @@ namespace CourseworkAD
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(146, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(529, 340);
+            this.panel2.Size = new System.Drawing.Size(559, 340);
             this.panel2.TabIndex = 0;
             // 
             // confirmButton
@@ -138,81 +132,71 @@ namespace CourseworkAD
             this.label27.TabIndex = 27;
             this.label27.Text = ":";
             // 
-            // label26
+            // durationLabel
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(392, 171);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(84, 25);
-            this.label26.TabIndex = 26;
-            this.label26.Text = "duration";
+            this.durationLabel.AutoSize = true;
+            this.durationLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.durationLabel.Location = new System.Drawing.Point(392, 171);
+            this.durationLabel.Name = "durationLabel";
+            this.durationLabel.Size = new System.Drawing.Size(84, 25);
+            this.durationLabel.TabIndex = 26;
+            this.durationLabel.Text = "duration";
             // 
-            // label25
+            // exitTimeLabel
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(392, 124);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(84, 25);
-            this.label25.TabIndex = 25;
-            this.label25.Text = "exit time";
+            this.exitTimeLabel.AutoSize = true;
+            this.exitTimeLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitTimeLabel.Location = new System.Drawing.Point(392, 124);
+            this.exitTimeLabel.Name = "exitTimeLabel";
+            this.exitTimeLabel.Size = new System.Drawing.Size(84, 25);
+            this.exitTimeLabel.TabIndex = 25;
+            this.exitTimeLabel.Text = "exit time";
             // 
-            // label24
+            // entryTimeLabel
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(392, 82);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(97, 25);
-            this.label24.TabIndex = 24;
-            this.label24.Text = "entry time";
+            this.entryTimeLabel.AutoSize = true;
+            this.entryTimeLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entryTimeLabel.Location = new System.Drawing.Point(392, 82);
+            this.entryTimeLabel.Name = "entryTimeLabel";
+            this.entryTimeLabel.Size = new System.Drawing.Size(97, 25);
+            this.entryTimeLabel.TabIndex = 24;
+            this.entryTimeLabel.Text = "entry time";
             // 
-            // label23
+            // costLabel
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(168, 259);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(49, 25);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "cost";
+            this.costLabel.AutoSize = true;
+            this.costLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.costLabel.Location = new System.Drawing.Point(157, 216);
+            this.costLabel.Name = "costLabel";
+            this.costLabel.Size = new System.Drawing.Size(49, 25);
+            this.costLabel.TabIndex = 23;
+            this.costLabel.Text = "cost";
             // 
-            // label22
+            // categoryLabel
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(168, 214);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(84, 25);
-            this.label22.TabIndex = 22;
-            this.label22.Text = "duration";
+            this.categoryLabel.AutoSize = true;
+            this.categoryLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryLabel.Location = new System.Drawing.Point(156, 171);
+            this.categoryLabel.Name = "categoryLabel";
+            this.categoryLabel.Size = new System.Drawing.Size(87, 25);
+            this.categoryLabel.TabIndex = 21;
+            this.categoryLabel.Text = "category";
             // 
-            // label21
+            // countLabel
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(165, 171);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(87, 25);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "category";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(168, 124);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(61, 25);
-            this.label20.TabIndex = 20;
-            this.label20.Text = "count";
+            this.countLabel.AutoSize = true;
+            this.countLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countLabel.Location = new System.Drawing.Point(156, 124);
+            this.countLabel.Name = "countLabel";
+            this.countLabel.Size = new System.Drawing.Size(61, 25);
+            this.countLabel.TabIndex = 20;
+            this.countLabel.Text = "count";
             // 
             // typeLabel
             // 
             this.typeLabel.AutoSize = true;
             this.typeLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.typeLabel.Location = new System.Drawing.Point(168, 82);
+            this.typeLabel.Location = new System.Drawing.Point(157, 82);
             this.typeLabel.Name = "typeLabel";
             this.typeLabel.Size = new System.Drawing.Size(49, 25);
             this.typeLabel.TabIndex = 19;
@@ -265,21 +249,11 @@ namespace CourseworkAD
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(119, 259);
+            this.label15.Location = new System.Drawing.Point(117, 216);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(18, 25);
             this.label15.TabIndex = 14;
             this.label15.Text = ":";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(119, 214);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(18, 25);
-            this.label14.TabIndex = 13;
-            this.label14.Text = ":";
             // 
             // label13
             // 
@@ -315,21 +289,11 @@ namespace CourseworkAD
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(39, 259);
+            this.label10.Location = new System.Drawing.Point(38, 216);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 25);
             this.label10.TabIndex = 9;
             this.label10.Text = "Cost";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(39, 214);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 25);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Duration";
             // 
             // label8
             // 
@@ -459,25 +423,22 @@ namespace CourseworkAD
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label durationLabel;
+        private System.Windows.Forms.Label exitTimeLabel;
+        private System.Windows.Forms.Label entryTimeLabel;
+        private System.Windows.Forms.Label costLabel;
+        private System.Windows.Forms.Label categoryLabel;
+        private System.Windows.Forms.Label countLabel;
         private System.Windows.Forms.Label typeLabel;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.Label label7;

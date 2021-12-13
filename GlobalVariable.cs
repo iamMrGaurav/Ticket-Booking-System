@@ -9,5 +9,7 @@ namespace CourseworkAD
     class GlobalVariable
     {
         public static bool isAdmin;
+        public static List<Record> records = new List<Record>();
+             
     }
 }

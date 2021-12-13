@@ -18,6 +18,8 @@ namespace CourseworkAD
             InitializeComponent();
         }
 
+
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new TicketForm());
@@ -29,6 +31,8 @@ namespace CourseworkAD
         }
             private void Home_Load(object sender, EventArgs e)
         {
+            ReadEntryRecord();
+
             if (GlobalVariable.isAdmin == true)
             {
                 ticketMenu.Enabled = true;
@@ -116,5 +120,31 @@ namespace CourseworkAD
             loadform(new LoginScreen());
             
         }
+
+        public void ReadEntryRecord()
+        {
+            string[] record = File.ReadAllLines("F:\\Cw_Ad\\DataRecord.csv");
+            GlobalVariable.records.Clear();
+
+            for (int i = 0; i < record.Length; i++)
+            {
+                var row = record[i].Split(',');
+                Record entryRecord = new Record
+                {
+                    idRecord = Convert.ToInt32(row[0]),
+                    categoryRecord = (row[1]),
+                    typeRecord = (row[2]),
+                    countRecord = Convert.ToInt32(row[3]),
+                    entryTimeRecord = DateTime.Parse(row[4]),
+                    exitTimeRecord = DateTime.Parse(row[5]),
+                    entryCostRecord = Convert.ToInt32(row[6]),
+                    isLeftRecord = bool.Parse(row[7]),
+                };
+                GlobalVariable.records.Add(entryRecord);
+
+            }
+        }
+
+
     }
 }
