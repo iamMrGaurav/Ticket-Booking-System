@@ -104,9 +104,9 @@ namespace CourseworkAD
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(146, 47);
+            this.panel2.Location = new System.Drawing.Point(113, 47);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(559, 340);
+            this.panel2.Size = new System.Drawing.Size(614, 340);
             this.panel2.TabIndex = 0;
             // 
             // confirmButton
@@ -120,7 +120,7 @@ namespace CourseworkAD
             this.confirmButton.TabIndex = 28;
             this.confirmButton.Text = "Confirm";
             this.confirmButton.UseVisualStyleBackColor = false;
-            this.confirmButton.Click += new System.EventHandler(this.button2_Click);
+            this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
             // label27
             // 
@@ -384,6 +384,7 @@ namespace CourseworkAD
             this.label28.Size = new System.Drawing.Size(126, 33);
             this.label28.TabIndex = 29;
             this.label28.Text = "Exit Form";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // panel1
             // 
@@ -396,6 +397,7 @@ namespace CourseworkAD
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ExitForm
             // 

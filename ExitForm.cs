@@ -18,11 +18,10 @@ namespace CourseworkAD
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+    
+       
 
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             try {
@@ -33,6 +32,7 @@ namespace CourseworkAD
                     if (data.idRecord == ID)
                     {
                         record = data;
+                       
                     }
                     
                 }
@@ -48,7 +48,7 @@ namespace CourseworkAD
                     exitTimeLabel.Text = record.exitTimeRecord.ToString();
                     var duration = (record.exitTimeRecord - record.entryTimeRecord);
                     durationLabel.Text = Convert.ToInt32(duration.TotalMinutes).ToString() + " " + "min";
-                    costLabel.Text = GetDurationCost(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString();
+                    costLabel.Text = getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString();
 
                 }
                 else
@@ -66,10 +66,11 @@ namespace CourseworkAD
 
 
 
-        public int GetDurationCost(int duration, string type, string category)
+        public int getCostAccordingToDuration(int duration, string type, string category)
         {
             TicketModel ticket = null;
-            double rate = 0;
+            double ticketRate = 20;
+
             foreach (TicketModel value in GlobalClass.tickets)
             {
                 if (value.type == type && value.category == category)
@@ -81,33 +82,52 @@ namespace CourseworkAD
             {
                 if (duration < 60)
                 {
-                    rate = ticket.rateOneHr;
+                    ticketRate = ticket.rateOneHr;
                 }
                 else if (duration < 120)
                 {
-                    rate = ticket.rateTwoHr;
+                    ticketRate = ticket.rateTwoHr;
                 }
                 else if (duration < 180)
                 {
-                    rate = ticket.rateThreeHr;
+                    ticketRate = ticket.rateThreeHr;
                 }
                 else if (duration < 240)
                 {
-                    rate = ticket.rateFourHr;
+                    ticketRate = ticket.rateFourHr;
                 }
                 else
                 {
-                    rate = ticket.rateWholeDay;
+                    ticketRate = ticket.rateWholeDay;
                 }
 
             }
-            else {
+            /*else {
                 MessageBox.Show("Data unavailable");
             
-            }
-            return Convert.ToInt32(rate);
+            }*/
+            return Convert.ToInt32(ticketRate);
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void confirmButton_Click(object sender, EventArgs e)
+        {
+            Record obj = new Record()
+            {
+                
+
+            };
+
+
+        }
     }
 }

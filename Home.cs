@@ -29,6 +29,7 @@ namespace CourseworkAD
             base.OnFormClosing(e);
             Application.Exit();
         }
+
             private void Home_Load(object sender, EventArgs e)
         {
             ReadEntryRecord();
