@@ -16,6 +16,7 @@ namespace CourseworkAD
         public Home()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
 
@@ -146,6 +147,9 @@ namespace CourseworkAD
             }
         }
 
-
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            time.Text = DateTime.Now.ToString();
+        }
     }
 }
