@@ -58,9 +58,10 @@ namespace CourseworkAD
         {
             string[] csvData = File.ReadAllLines("F:\\Cw_Ad\\TicketRate.csv");
 
-            var record = csvData[rowIndex].Split(',');
 
+            var record = csvData[rowIndex].Split(',');
             record[columnIndex] = value.ToString();
+
             var updatedRow = "";
             for (int j = 0; j < record.Length; j++)
             {

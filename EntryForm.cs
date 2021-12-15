@@ -150,6 +150,7 @@ namespace CourseworkAD
             string ExitTime = DateTime.Now.ToString();
             double cost = 0;
             bool hasLeft = false;
+
             if (type == "Group") {
 
                 type = searchGroup(count);
@@ -173,8 +174,8 @@ namespace CourseworkAD
             
             string newRecord = id + "," + category + "," + type + "," + count + "," + EntryTime + "," + ExitTime + "," + cost + "," + hasLeft + "\n";
             File.AppendAllText("F:\\Cw_Ad\\DataRecord.csv", newRecord);
-            Console.WriteLine(newRecord);
             MessageBox.Show("Data Inserted Successfully");
+            
 
         }
 

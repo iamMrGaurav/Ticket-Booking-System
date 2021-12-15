@@ -18,37 +18,49 @@ namespace CourseworkAD
             InitializeComponent();
         }
 
-    
-       
 
-        
+
+
+        Record record = null;
         private void button1_Click(object sender, EventArgs e)
         {
             try {
                 int ID = Convert.ToInt32(idTextBox.Text);
-                Record record = null;
+                
                 foreach (Record data in GlobalVariable.records)
                 {
                     if (data.idRecord == ID)
                     {
                         record = data;
-                       
+                        
                     }
                     
                 }
 
                 if (record != null)
                 {
-                    record.exitTimeRecord = DateTime.Now;
-                    idTextBox.Text = record.idRecord.ToString();
-                    categoryLabel.Text = record.categoryRecord;
-                    typeLabel.Text = record.typeRecord;
-                    countLabel.Text = record.countRecord.ToString();
-                    entryTimeLabel.Text = record.entryTimeRecord.ToString();
-                    exitTimeLabel.Text = record.exitTimeRecord.ToString();
-                    var duration = (record.exitTimeRecord - record.entryTimeRecord);
-                    durationLabel.Text = Convert.ToInt32(duration.TotalMinutes).ToString() + " " + "min";
-                    costLabel.Text = getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString();
+
+                    string checkExit = record.isLeftRecord.ToString();
+                    if (checkExit == "False")
+                    {
+
+                        record.exitTimeRecord = DateTime.Now;
+                        idTextBox.Text = record.idRecord.ToString();
+                        categoryLabel.Text = record.categoryRecord;
+                        typeLabel.Text = record.typeRecord;
+                        countLabel.Text = record.countRecord.ToString();
+                        entryTimeLabel.Text = record.entryTimeRecord.ToString();
+                        exitTimeLabel.Text = record.exitTimeRecord.ToString();
+                        var duration = (record.exitTimeRecord - record.entryTimeRecord);
+                        durationLabel.Text = Convert.ToInt32(duration.TotalMinutes).ToString() + " " + "min";
+                        costLabel.Text = getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString();
+                        record.entryCostRecord = Convert.ToDouble(getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString());
+
+                    }
+                    else {
+
+                        MessageBox.Show("User Already exited");
+                    }
 
                 }
                 else
@@ -121,11 +133,56 @@ namespace CourseworkAD
 
         private void confirmButton_Click(object sender, EventArgs e)
         {
-            Record obj = new Record()
-            {
-                
+           
+               /* int ID = Convert.ToInt32(idTextBox.Text);*/
 
-            };
+            if (record != null)
+            {
+
+                foreach (Record data in GlobalVariable.records)
+                {
+                    if (data.idRecord == record.idRecord)
+                    {
+                        record.isLeftRecord = true;
+
+
+                    }
+
+                }
+                string updatedCsv = "";
+                for (int i = 0; i < GlobalVariable.records.Count; i++)
+                {
+                    Record r = GlobalVariable.records[i];
+                    if (i == GlobalVariable.records.Count - 1)
+                    {
+
+                        updatedCsv += r.idRecord + "," + r.categoryRecord + "," + r.typeRecord + "," + r.countRecord + "," + r.entryTimeRecord + "," + r.exitTimeRecord + "," + r.entryCostRecord + "," + r.isLeftRecord;
+
+                    }
+                    else
+                    {
+
+                        updatedCsv += r.idRecord + "," + r.categoryRecord + "," + r.typeRecord + "," + r.countRecord + "," + r.entryTimeRecord + "," + r.exitTimeRecord + "," + r.entryCostRecord + "," + r.isLeftRecord + "\n";
+
+
+                    }
+
+                }
+                if (updatedCsv != "")
+                {
+
+                    File.WriteAllText("F:\\Cw_Ad\\DataRecord.csv", updatedCsv);
+                    MessageBox.Show("Exit Confirmed");
+
+                }
+
+            }
+            else {
+
+                MessageBox.Show("Enter Id to confirm the exit time");
+            
+            }
+            
 
 
         }
