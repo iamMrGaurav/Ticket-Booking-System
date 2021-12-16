@@ -29,17 +29,21 @@ namespace CourseworkAD
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.fromDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.toDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.fromDateTimeValue = new System.Windows.Forms.DateTimePicker();
+            this.toDateTimeValue = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.totalTransactionLabel = new System.Windows.Forms.Label();
             this.groupTransactionLabel = new System.Windows.Forms.Label();
             this.childrenTransactionLabel = new System.Windows.Forms.Label();
@@ -52,15 +56,11 @@ namespace CourseworkAD
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.weeklyReportChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.getReport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.weeklyReportChart)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.weeklyReportChart)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -96,19 +96,19 @@ namespace CourseworkAD
             this.label3.TabIndex = 17;
             this.label3.Text = "To";
             // 
-            // fromDateTimePicker
+            // fromDateTimeValue
             // 
-            this.fromDateTimePicker.Location = new System.Drawing.Point(93, 84);
-            this.fromDateTimePicker.Name = "fromDateTimePicker";
-            this.fromDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fromDateTimePicker.TabIndex = 18;
+            this.fromDateTimeValue.Location = new System.Drawing.Point(93, 84);
+            this.fromDateTimeValue.Name = "fromDateTimeValue";
+            this.fromDateTimeValue.Size = new System.Drawing.Size(200, 20);
+            this.fromDateTimeValue.TabIndex = 18;
             // 
-            // toDateTimePicker
+            // toDateTimeValue
             // 
-            this.toDateTimePicker.Location = new System.Drawing.Point(364, 82);
-            this.toDateTimePicker.Name = "toDateTimePicker";
-            this.toDateTimePicker.Size = new System.Drawing.Size(205, 20);
-            this.toDateTimePicker.TabIndex = 19;
+            this.toDateTimeValue.Location = new System.Drawing.Point(364, 84);
+            this.toDateTimeValue.Name = "toDateTimeValue";
+            this.toDateTimeValue.Size = new System.Drawing.Size(205, 20);
+            this.toDateTimeValue.TabIndex = 19;
             // 
             // label4
             // 
@@ -126,7 +126,7 @@ namespace CourseworkAD
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(343, 80);
+            this.label5.Location = new System.Drawing.Point(340, 82);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(15, 24);
             this.label5.TabIndex = 21;
@@ -153,6 +153,51 @@ namespace CourseworkAD
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(374, 250);
             this.panel1.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(374, 51);
+            this.panel2.TabIndex = 41;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(23, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 24);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Type";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(146, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 24);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Count";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(252, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(108, 24);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Transaction";
             // 
             // totalTransactionLabel
             // 
@@ -286,92 +331,48 @@ namespace CourseworkAD
             this.label9.TabIndex = 26;
             this.label9.Text = "Adult";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(252, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(108, 24);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Transaction";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(146, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 24);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Count";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(23, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 24);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Type";
-            // 
             // weeklyReportChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.weeklyReportChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.weeklyReportChart.Legends.Add(legend3);
-            this.weeklyReportChart.Location = new System.Drawing.Point(418, 121);
+            chartArea1.Name = "ChartArea1";
+            this.weeklyReportChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.weeklyReportChart.Legends.Add(legend1);
+            this.weeklyReportChart.Location = new System.Drawing.Point(413, 121);
             this.weeklyReportChart.Name = "weeklyReportChart";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.weeklyReportChart.Series.Add(series3);
-            this.weeklyReportChart.Size = new System.Drawing.Size(370, 300);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.weeklyReportChart.Series.Add(series1);
+            this.weeklyReportChart.Size = new System.Drawing.Size(375, 300);
             this.weeklyReportChart.TabIndex = 23;
             this.weeklyReportChart.Text = "chart1";
             // 
-            // button2
+            // getReport
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(609, 69);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 37);
-            this.button2.TabIndex = 34;
-            this.button2.Text = "Get Report";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(374, 51);
-            this.panel2.TabIndex = 41;
+            this.getReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
+            this.getReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getReport.ForeColor = System.Drawing.Color.White;
+            this.getReport.Location = new System.Drawing.Point(609, 69);
+            this.getReport.Name = "getReport";
+            this.getReport.Size = new System.Drawing.Size(104, 37);
+            this.getReport.TabIndex = 34;
+            this.getReport.Text = "Get Report";
+            this.getReport.UseVisualStyleBackColor = false;
+            this.getReport.Click += new System.EventHandler(this.getReport_Click);
             // 
             // WeeklyReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(814, 450);
+            this.Controls.Add(this.getReport);
             this.Controls.Add(this.weeklyReportChart);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.toDateTimePicker);
-            this.Controls.Add(this.fromDateTimePicker);
+            this.Controls.Add(this.toDateTimeValue);
+            this.Controls.Add(this.fromDateTimeValue);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -380,9 +381,9 @@ namespace CourseworkAD
             this.Text = "WeeklyReportForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.weeklyReportChart)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.weeklyReportChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,8 +394,8 @@ namespace CourseworkAD
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker fromDateTimePicker;
-        private System.Windows.Forms.DateTimePicker toDateTimePicker;
+        private System.Windows.Forms.DateTimePicker fromDateTimeValue;
+        private System.Windows.Forms.DateTimePicker toDateTimeValue;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
@@ -414,7 +415,7 @@ namespace CourseworkAD
         private System.Windows.Forms.Label childrenCountLabel;
         private System.Windows.Forms.Label adultCountLabel;
         private System.Windows.Forms.DataVisualization.Charting.Chart weeklyReportChart;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button getReport;
         private System.Windows.Forms.Panel panel2;
     }
 }

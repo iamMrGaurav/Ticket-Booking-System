@@ -104,9 +104,9 @@ namespace CourseworkAD
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(113, 47);
+            this.panel2.Location = new System.Drawing.Point(90, 45);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(614, 340);
+            this.panel2.Size = new System.Drawing.Size(630, 340);
             this.panel2.TabIndex = 0;
             // 
             // confirmButton
@@ -114,7 +114,7 @@ namespace CourseworkAD
             this.confirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmButton.ForeColor = System.Drawing.Color.White;
-            this.confirmButton.Location = new System.Drawing.Point(421, 255);
+            this.confirmButton.Location = new System.Drawing.Point(515, 268);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(92, 37);
             this.confirmButton.TabIndex = 28;
@@ -136,6 +136,7 @@ namespace CourseworkAD
             // 
             this.durationLabel.AutoSize = true;
             this.durationLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.durationLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.durationLabel.Location = new System.Drawing.Point(392, 171);
             this.durationLabel.Name = "durationLabel";
             this.durationLabel.Size = new System.Drawing.Size(84, 25);
@@ -146,6 +147,7 @@ namespace CourseworkAD
             // 
             this.exitTimeLabel.AutoSize = true;
             this.exitTimeLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.exitTimeLabel.Location = new System.Drawing.Point(392, 124);
             this.exitTimeLabel.Name = "exitTimeLabel";
             this.exitTimeLabel.Size = new System.Drawing.Size(84, 25);
@@ -156,6 +158,7 @@ namespace CourseworkAD
             // 
             this.entryTimeLabel.AutoSize = true;
             this.entryTimeLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.entryTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.entryTimeLabel.Location = new System.Drawing.Point(392, 82);
             this.entryTimeLabel.Name = "entryTimeLabel";
             this.entryTimeLabel.Size = new System.Drawing.Size(97, 25);
@@ -166,6 +169,7 @@ namespace CourseworkAD
             // 
             this.costLabel.AutoSize = true;
             this.costLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.costLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.costLabel.Location = new System.Drawing.Point(157, 216);
             this.costLabel.Name = "costLabel";
             this.costLabel.Size = new System.Drawing.Size(49, 25);
@@ -176,6 +180,7 @@ namespace CourseworkAD
             // 
             this.categoryLabel.AutoSize = true;
             this.categoryLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.categoryLabel.Location = new System.Drawing.Point(156, 171);
             this.categoryLabel.Name = "categoryLabel";
             this.categoryLabel.Size = new System.Drawing.Size(87, 25);
@@ -186,6 +191,7 @@ namespace CourseworkAD
             // 
             this.countLabel.AutoSize = true;
             this.countLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.countLabel.Location = new System.Drawing.Point(156, 124);
             this.countLabel.Name = "countLabel";
             this.countLabel.Size = new System.Drawing.Size(61, 25);
@@ -196,6 +202,7 @@ namespace CourseworkAD
             // 
             this.typeLabel.AutoSize = true;
             this.typeLabel.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.typeLabel.Location = new System.Drawing.Point(157, 82);
             this.typeLabel.Name = "typeLabel";
             this.typeLabel.Size = new System.Drawing.Size(49, 25);

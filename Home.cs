@@ -133,6 +133,7 @@ namespace CourseworkAD
                 var row = record[initial].Split(',');
                 Record entryRecord = new Record
                 {
+
                     idRecord = Convert.ToInt32(row[0]),
                     categoryRecord = (row[1]),
                     typeRecord = (row[2]),
@@ -141,6 +142,7 @@ namespace CourseworkAD
                     exitTimeRecord = DateTime.Parse(row[5]),
                     entryCostRecord = Convert.ToInt32(row[6]),
                     isLeftRecord = bool.Parse(row[7]),
+                
                 };
                 GlobalVariable.records.Add(entryRecord);
 

@@ -21,5 +21,14 @@ namespace CourseworkAD
         {
 
         }
+
+        private void getReport_Click(object sender, EventArgs e)
+        {   
+         string fromDateValue = fromDateTimeValue.Value.ToShortDateString();
+         string toDateValue = toDateTimeValue.Value.ToShortDateString();
+
+
+
+        }
     }
 }

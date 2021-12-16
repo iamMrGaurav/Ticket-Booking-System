@@ -151,10 +151,11 @@ namespace CourseworkAD
             double cost = 0;
             bool hasLeft = false;
 
-            if (type == "Group") {
+            if (type == "Group")
+            {
 
                 type = searchGroup(count);
-            
+
             }
             Record record = new Record
             {
@@ -171,7 +172,7 @@ namespace CourseworkAD
 
             GlobalVariable.records.Add(record);
             
-            
+               
             string newRecord = id + "," + category + "," + type + "," + count + "," + EntryTime + "," + ExitTime + "," + cost + "," + hasLeft + "\n";
             File.AppendAllText("F:\\Cw_Ad\\DataRecord.csv", newRecord);
             MessageBox.Show("Data Inserted Successfully");

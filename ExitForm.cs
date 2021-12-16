@@ -19,8 +19,6 @@ namespace CourseworkAD
         }
 
 
-
-
         Record record = null;
         private void button1_Click(object sender, EventArgs e)
         {
@@ -39,12 +37,19 @@ namespace CourseworkAD
 
                 if (record != null)
                 {
-
-                    string checkExit = record.isLeftRecord.ToString();
-                    if (checkExit == "False")
+                    if (!record.isLeftRecord)
                     {
-
                         record.exitTimeRecord = DateTime.Now;
+                        confirmButton.Visible = true;
+
+
+                    }
+                    else {
+
+                        confirmButton.Visible = false;
+                    }
+
+                
                         idTextBox.Text = record.idRecord.ToString();
                         categoryLabel.Text = record.categoryRecord;
                         typeLabel.Text = record.typeRecord;
@@ -55,13 +60,8 @@ namespace CourseworkAD
                         durationLabel.Text = Convert.ToInt32(duration.TotalMinutes).ToString() + " " + "min";
                         costLabel.Text = getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString();
                         record.entryCostRecord = Convert.ToDouble(getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString());
-
-                    }
-                    else {
-
-                        MessageBox.Show("User Already exited");
-                    }
-
+                        
+             
                 }
                 else
                 {
@@ -134,7 +134,7 @@ namespace CourseworkAD
         private void confirmButton_Click(object sender, EventArgs e)
         {
            
-               /* int ID = Convert.ToInt32(idTextBox.Text);*/
+               
 
             if (record != null)
             {
@@ -179,7 +179,7 @@ namespace CourseworkAD
             }
             else {
 
-                MessageBox.Show("Enter Id to confirm the exit time");
+                MessageBox.Show("Enter existed Id to confirm");
             
             }
             
