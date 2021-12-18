@@ -43,7 +43,7 @@ namespace CourseworkAD
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(35, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(709, 314);
+            this.panel2.Size = new System.Drawing.Size(709, 296);
             this.panel2.TabIndex = 22;
             // 
             // ticketData
@@ -52,7 +52,7 @@ namespace CourseworkAD
             this.ticketData.AllowUserToDeleteRows = false;
             this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ticketData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ticketData.Location = new System.Drawing.Point(0, 51);
+            this.ticketData.Location = new System.Drawing.Point(0, 33);
             this.ticketData.Name = "ticketData";
             this.ticketData.Size = new System.Drawing.Size(709, 263);
             this.ticketData.TabIndex = 26;
@@ -64,7 +64,7 @@ namespace CourseworkAD
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(322, 13);
+            this.label2.Location = new System.Drawing.Point(324, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 25);
             this.label2.TabIndex = 25;

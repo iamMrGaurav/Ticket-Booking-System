@@ -29,9 +29,9 @@ namespace CourseworkAD
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -148,7 +148,7 @@ namespace CourseworkAD
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(12, 190);
+            this.panel1.Location = new System.Drawing.Point(16, 169);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(374, 181);
             this.panel1.TabIndex = 22;
@@ -299,16 +299,16 @@ namespace CourseworkAD
             // 
             // weeklyReportChart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.weeklyReportChart.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.weeklyReportChart.Legends.Add(legend4);
-            this.weeklyReportChart.Location = new System.Drawing.Point(427, 112);
+            chartArea1.Name = "ChartArea1";
+            this.weeklyReportChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.weeklyReportChart.Legends.Add(legend1);
+            this.weeklyReportChart.Location = new System.Drawing.Point(410, 112);
             this.weeklyReportChart.Name = "weeklyReportChart";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.weeklyReportChart.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.weeklyReportChart.Series.Add(series1);
             this.weeklyReportChart.Size = new System.Drawing.Size(375, 259);
             this.weeklyReportChart.TabIndex = 23;
             this.weeklyReportChart.Text = "chart1";

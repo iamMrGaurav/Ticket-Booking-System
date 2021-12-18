@@ -214,7 +214,7 @@ namespace CourseworkAD
             this.categoryLabel.AutoSize = true;
             this.categoryLabel.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.categoryLabel.ForeColor = System.Drawing.Color.White;
-            this.categoryLabel.Location = new System.Drawing.Point(127, 120);
+            this.categoryLabel.Location = new System.Drawing.Point(127, 126);
             this.categoryLabel.Name = "categoryLabel";
             this.categoryLabel.Size = new System.Drawing.Size(65, 30);
             this.categoryLabel.TabIndex = 15;

@@ -29,10 +29,10 @@ namespace CourseworkAD
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dailyDate = new System.Windows.Forms.DateTimePicker();
@@ -262,20 +262,20 @@ namespace CourseworkAD
             // 
             // dailyReportChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.dailyReportChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.dailyReportChart.Legends.Add(legend3);
-            this.dailyReportChart.Location = new System.Drawing.Point(418, 131);
+            chartArea2.Name = "ChartArea1";
+            this.dailyReportChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.dailyReportChart.Legends.Add(legend2);
+            this.dailyReportChart.Location = new System.Drawing.Point(418, 92);
             this.dailyReportChart.Name = "dailyReportChart";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Income";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Count";
-            this.dailyReportChart.Series.Add(series5);
-            this.dailyReportChart.Series.Add(series6);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Income";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Count";
+            this.dailyReportChart.Series.Add(series3);
+            this.dailyReportChart.Series.Add(series4);
             this.dailyReportChart.Size = new System.Drawing.Size(370, 250);
             this.dailyReportChart.TabIndex = 32;
             this.dailyReportChart.Text = "chart1";
@@ -287,7 +287,7 @@ namespace CourseworkAD
             this.getDailyReport.ForeColor = System.Drawing.Color.White;
             this.getDailyReport.Location = new System.Drawing.Point(299, 90);
             this.getDailyReport.Name = "getDailyReport";
-            this.getDailyReport.Size = new System.Drawing.Size(113, 31);
+            this.getDailyReport.Size = new System.Drawing.Size(113, 35);
             this.getDailyReport.TabIndex = 33;
             this.getDailyReport.Text = "Get Report";
             this.getDailyReport.UseVisualStyleBackColor = false;

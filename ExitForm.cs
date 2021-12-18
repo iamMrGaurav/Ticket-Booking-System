@@ -135,20 +135,22 @@ namespace CourseworkAD
         {
            
                
-
             if (record != null)
             {
+               
 
-                foreach (Record data in GlobalVariable.records)
-                {
-                    if (data.idRecord == record.idRecord)
+                    foreach (Record data in GlobalVariable.records)
                     {
-                        record.isLeftRecord = true;
+                        if (data.idRecord == record.idRecord)
+                        {
 
+                            record.isLeftRecord = true;
 
                     }
 
                 }
+
+              
                 string updatedCsv = "";
                 for (int i = 0; i < GlobalVariable.records.Count; i++)
                 {
@@ -173,6 +175,7 @@ namespace CourseworkAD
 
                     File.WriteAllText("F:\\Cw_Ad\\DataRecord.csv", updatedCsv);
                     MessageBox.Show("Exit Confirmed");
+                    confirmButton.Visible = false;
 
                 }
 

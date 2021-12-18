@@ -106,7 +106,7 @@ namespace CourseworkAD
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(90, 45);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(630, 340);
+            this.panel2.Size = new System.Drawing.Size(630, 287);
             this.panel2.TabIndex = 0;
             // 
             // confirmButton
@@ -114,7 +114,7 @@ namespace CourseworkAD
             this.confirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.confirmButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmButton.ForeColor = System.Drawing.Color.White;
-            this.confirmButton.Location = new System.Drawing.Point(515, 268);
+            this.confirmButton.Location = new System.Drawing.Point(513, 216);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(92, 37);
             this.confirmButton.TabIndex = 28;

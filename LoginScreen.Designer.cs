@@ -112,7 +112,7 @@ namespace CourseworkAD
             this.skipButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.skipButton.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.skipButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.skipButton.Location = new System.Drawing.Point(675, 403);
+            this.skipButton.Location = new System.Drawing.Point(699, 365);
             this.skipButton.Name = "skipButton";
             this.skipButton.Size = new System.Drawing.Size(89, 34);
             this.skipButton.TabIndex = 18;
