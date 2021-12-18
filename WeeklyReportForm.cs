@@ -22,12 +22,60 @@ namespace CourseworkAD
 
         }
 
+        List<Record> recordData = new List<Record>();
+
+        public void getData() {
+            DateTime fromDateValue = fromDateTimeValue.Value;
+            DateTime toDateValue = toDateTimeValue.Value;
+
+            foreach (Record data in GlobalVariable.records)
+            {
+                if (data.entryTimeRecord.ToString("yyyy-MM-dd") == fromDateValue.ToString("yyyy-MM-dd"))
+                {
+                    recordData.Add(data);
+                }
+
+            }
+           
+        }
         private void getReport_Click(object sender, EventArgs e)
         {   
-         string fromDateValue = fromDateTimeValue.Value.ToShortDateString();
-         string toDateValue = toDateTimeValue.Value.ToShortDateString();
+            
+         
 
 
+
+
+
+        }
+
+        private void WeeklyReportForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fromDateTimeValue_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toDateTimeValue_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

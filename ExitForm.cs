@@ -49,7 +49,7 @@ namespace CourseworkAD
                         confirmButton.Visible = false;
                     }
 
-                
+             
                         idTextBox.Text = record.idRecord.ToString();
                         categoryLabel.Text = record.categoryRecord;
                         typeLabel.Text = record.typeRecord;

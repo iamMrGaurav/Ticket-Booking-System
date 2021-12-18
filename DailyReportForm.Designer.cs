@@ -29,10 +29,10 @@ namespace CourseworkAD
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dailyDate = new System.Windows.Forms.DateTimePicker();
@@ -50,9 +50,11 @@ namespace CourseworkAD
             this.childrenTransactionLabel = new System.Windows.Forms.Label();
             this.groupTransactionLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dailyReportChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.getDailyReport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dailyReportChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,8 +102,8 @@ namespace CourseworkAD
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(21, 9);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(23, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 24);
             this.label6.TabIndex = 23;
@@ -111,8 +113,8 @@ namespace CourseworkAD
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(145, 9);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(142, 10);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 24);
             this.label7.TabIndex = 24;
@@ -122,8 +124,8 @@ namespace CourseworkAD
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(263, 9);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(245, 10);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 24);
             this.label8.TabIndex = 25;
@@ -231,6 +233,7 @@ namespace CourseworkAD
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.groupTransactionLabel);
             this.panel1.Controls.Add(this.childrenTransactionLabel);
             this.panel1.Controls.Add(this.adultTransactionLabel);
@@ -240,31 +243,40 @@ namespace CourseworkAD
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(12, 131);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 250);
+            this.panel1.Size = new System.Drawing.Size(374, 185);
             this.panel1.TabIndex = 31;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(374, 46);
+            this.panel2.TabIndex = 43;
             // 
             // dailyReportChart
             // 
-            chartArea5.Name = "ChartArea1";
-            this.dailyReportChart.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.dailyReportChart.Legends.Add(legend5);
-            this.dailyReportChart.Location = new System.Drawing.Point(418, 81);
+            chartArea3.Name = "ChartArea1";
+            this.dailyReportChart.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.dailyReportChart.Legends.Add(legend3);
+            this.dailyReportChart.Location = new System.Drawing.Point(418, 131);
             this.dailyReportChart.Name = "dailyReportChart";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Income";
-            series10.ChartArea = "ChartArea1";
-            series10.Legend = "Legend1";
-            series10.Name = "Count";
-            this.dailyReportChart.Series.Add(series9);
-            this.dailyReportChart.Series.Add(series10);
-            this.dailyReportChart.Size = new System.Drawing.Size(370, 300);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Income";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Count";
+            this.dailyReportChart.Series.Add(series5);
+            this.dailyReportChart.Series.Add(series6);
+            this.dailyReportChart.Size = new System.Drawing.Size(370, 250);
             this.dailyReportChart.TabIndex = 32;
             this.dailyReportChart.Text = "chart1";
             // 
@@ -300,6 +312,8 @@ namespace CourseworkAD
             this.Load += new System.EventHandler(this.DailyReportForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dailyReportChart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -328,5 +342,6 @@ namespace CourseworkAD
         private System.Windows.Forms.DataVisualization.Charting.Chart dailyReportChart;
         private System.Windows.Forms.Button getReport;
         private System.Windows.Forms.Button getDailyReport;
+        private System.Windows.Forms.Panel panel2;
     }
 }

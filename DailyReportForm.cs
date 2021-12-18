@@ -22,7 +22,6 @@ namespace CourseworkAD
 
             DateTime date = (dailyDate.Value);
             foreach (Record data in GlobalVariable.records) {
-
                 if (data.entryTimeRecord.ToString("yyyy-MM-dd") == date.ToString("yyyy-MM-dd")) {
                     recordData.Add(data);
                 }
