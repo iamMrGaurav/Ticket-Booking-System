@@ -11,7 +11,5 @@ namespace CourseworkAD
     class GlobalClass
     {
         public static List<TicketModel> tickets = new List<TicketModel>();
-
-       
     }
 }

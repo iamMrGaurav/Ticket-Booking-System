@@ -68,6 +68,7 @@
     </Compile>
     <Compile Include="GlobalClass.cs" />
     <Compile Include="GlobalVariable.cs" />
+    <Compile Include="Report.cs" />
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>

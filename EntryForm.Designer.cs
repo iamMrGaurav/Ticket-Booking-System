@@ -226,6 +226,7 @@ namespace CourseworkAD
             this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ticketData.Location = new System.Drawing.Point(211, 75);
             this.ticketData.Name = "ticketData";
+            this.ticketData.ReadOnly = true;
             this.ticketData.Size = new System.Drawing.Size(577, 244);
             this.ticketData.TabIndex = 16;
             // 

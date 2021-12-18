@@ -10,6 +10,7 @@ namespace CourseworkAD
     {
         public static bool isAdmin;
         public static List<Record> records = new List<Record>();
+        public static List<Report> reportList = new List<Report>(); 
              
     }
 }
