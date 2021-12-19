@@ -208,6 +208,7 @@ namespace CourseworkAD
         }
 
 
+
         static void weeklyReportBubbleSort(List<Report> list)
         {
             int listCount = list.Count;
@@ -221,9 +222,6 @@ namespace CourseworkAD
                         list[j] = list[j + 1];
                         list[j + 1] = tempList;
                     }
-
-
-
                 }
             }
 

@@ -107,8 +107,7 @@ namespace CourseworkAD
             this.typeValue.Items.AddRange(new object[] {
             "Child",
             "Adult",
-            "Group",
-            "Staff"});
+            "Group"});
             this.typeValue.Location = new System.Drawing.Point(132, 172);
             this.typeValue.Name = "typeValue";
             this.typeValue.Size = new System.Drawing.Size(73, 28);

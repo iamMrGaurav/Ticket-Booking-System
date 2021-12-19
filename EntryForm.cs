@@ -26,7 +26,7 @@ namespace CourseworkAD
         }
 
         //This method autoIncrement the Id
-        public void updateId() {
+        public void autoUpdateId() {
 
             string[] data = File.ReadAllLines("F:\\Cw_Ad\\DataRecord.csv");
             int value = Convert.ToInt32(data.Length) + 1;
@@ -36,7 +36,7 @@ namespace CourseworkAD
         private void EntryForm_Load(object sender, EventArgs e)
         {
 
-            updateId();
+            autoUpdateId();
             //This distinguis the real time date inthe  category section
 
             DateTime date = DateTime.Now;
@@ -105,7 +105,7 @@ namespace CourseworkAD
         {
             insertRecordIntoCsv();
             countNumericUpDownValue.Value = 1;
-            updateId();
+            autoUpdateId();
 
             
             
