@@ -107,9 +107,7 @@ namespace CourseworkAD
             countNumericUpDownValue.Value = 1;
             autoUpdateId();
 
-            
-            
-
+           
 
         }
 
@@ -195,6 +193,11 @@ namespace CourseworkAD
         }
 
         private void idValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ticketData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

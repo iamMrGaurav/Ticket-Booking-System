@@ -228,6 +228,7 @@ namespace CourseworkAD
             this.ticketData.ReadOnly = true;
             this.ticketData.Size = new System.Drawing.Size(577, 244);
             this.ticketData.TabIndex = 16;
+            this.ticketData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketData_CellContentClick);
             // 
             // idValue
             // 

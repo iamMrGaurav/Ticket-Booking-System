@@ -46,6 +46,11 @@ namespace CourseworkAD
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.ticketData = new System.Windows.Forms.DataGridView();
+            this.viewRecordButton = new System.Windows.Forms.RadioButton();
+            this.ticketRateButton = new System.Windows.Forms.RadioButton();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.homePanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -53,6 +58,9 @@ namespace CourseworkAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ticketData)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -118,7 +126,8 @@ namespace CourseworkAD
             // 
             // homePanel
             // 
-            this.homePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
+            this.homePanel.BackColor = System.Drawing.Color.White;
+            this.homePanel.Controls.Add(this.panel5);
             this.homePanel.Controls.Add(this.panel2);
             this.homePanel.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homePanel.Location = new System.Drawing.Point(0, 1);
@@ -201,6 +210,64 @@ namespace CourseworkAD
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.ticketData);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 85);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(933, 421);
+            this.panel5.TabIndex = 3;
+            // 
+            // ticketData
+            // 
+            this.ticketData.AllowUserToAddRows = false;
+            this.ticketData.AllowUserToDeleteRows = false;
+            this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ticketData.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ticketData.Location = new System.Drawing.Point(0, 129);
+            this.ticketData.Name = "ticketData";
+            this.ticketData.Size = new System.Drawing.Size(933, 292);
+            this.ticketData.TabIndex = 27;
+            this.ticketData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketData_CellContentClick);
+            // 
+            // viewRecordButton
+            // 
+            this.viewRecordButton.AutoSize = true;
+            this.viewRecordButton.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewRecordButton.Location = new System.Drawing.Point(516, 3);
+            this.viewRecordButton.Name = "viewRecordButton";
+            this.viewRecordButton.Size = new System.Drawing.Size(126, 25);
+            this.viewRecordButton.TabIndex = 4;
+            this.viewRecordButton.TabStop = true;
+            this.viewRecordButton.Text = "View Record";
+            this.viewRecordButton.UseVisualStyleBackColor = true;
+            this.viewRecordButton.CheckedChanged += new System.EventHandler(this.viewRecordButton_CheckedChanged_1);
+            // 
+            // ticketRateButton
+            // 
+            this.ticketRateButton.AutoSize = true;
+            this.ticketRateButton.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ticketRateButton.Location = new System.Drawing.Point(347, 3);
+            this.ticketRateButton.Name = "ticketRateButton";
+            this.ticketRateButton.Size = new System.Drawing.Size(114, 25);
+            this.ticketRateButton.TabIndex = 3;
+            this.ticketRateButton.TabStop = true;
+            this.ticketRateButton.Text = "Ticket Rate";
+            this.ticketRateButton.UseVisualStyleBackColor = true;
+            this.ticketRateButton.CheckedChanged += new System.EventHandler(this.ticketRateButton_CheckedChanged_1);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.ticketRateButton);
+            this.panel6.Controls.Add(this.viewRecordButton);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(933, 41);
+            this.panel6.TabIndex = 28;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -228,6 +295,10 @@ namespace CourseworkAD
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ticketData)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -249,5 +320,10 @@ namespace CourseworkAD
         private System.Windows.Forms.Label time;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridView ticketData;
+        private System.Windows.Forms.RadioButton viewRecordButton;
+        private System.Windows.Forms.RadioButton ticketRateButton;
+        private System.Windows.Forms.Panel panel6;
     }
 }
