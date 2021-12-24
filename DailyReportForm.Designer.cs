@@ -62,7 +62,7 @@ namespace CourseworkAD
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(285, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 33);
@@ -73,7 +73,7 @@ namespace CourseworkAD
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(23, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 24);
@@ -91,7 +91,7 @@ namespace CourseworkAD
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(72, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 24);
@@ -262,6 +262,9 @@ namespace CourseworkAD
             // 
             // dailyReportChart
             // 
+            this.dailyReportChart.BorderlineColor = System.Drawing.Color.Black;
+            this.dailyReportChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.dailyReportChart.BorderlineWidth = 2;
             chartArea2.Name = "ChartArea1";
             this.dailyReportChart.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
@@ -297,7 +300,7 @@ namespace CourseworkAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.getDailyReport);
             this.Controls.Add(this.dailyReportChart);

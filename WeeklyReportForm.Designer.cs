@@ -29,10 +29,10 @@ namespace CourseworkAD
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +41,18 @@ namespace CourseworkAD
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.saturdayTransactionLabel = new System.Windows.Forms.Label();
+            this.saturdayCountLabel = new System.Windows.Forms.Label();
+            this.fridayTransactionLabel = new System.Windows.Forms.Label();
+            this.fridayCountLabel = new System.Windows.Forms.Label();
+            this.thursdayTransactionLabel = new System.Windows.Forms.Label();
+            this.thursdayCountLabel = new System.Windows.Forms.Label();
+            this.wednesdayTransactionLabel = new System.Windows.Forms.Label();
+            this.wednesdayCountLabel = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,18 +68,6 @@ namespace CourseworkAD
             this.label9 = new System.Windows.Forms.Label();
             this.weeklyReportChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.getReport = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.wednesdayCountLabel = new System.Windows.Forms.Label();
-            this.wednesdayTransactionLabel = new System.Windows.Forms.Label();
-            this.thursdayCountLabel = new System.Windows.Forms.Label();
-            this.thursdayTransactionLabel = new System.Windows.Forms.Label();
-            this.fridayCountLabel = new System.Windows.Forms.Label();
-            this.fridayTransactionLabel = new System.Windows.Forms.Label();
-            this.saturdayCountLabel = new System.Windows.Forms.Label();
-            this.saturdayTransactionLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weeklyReportChart)).BeginInit();
@@ -177,6 +177,138 @@ namespace CourseworkAD
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(374, 266);
             this.panel1.TabIndex = 22;
+            // 
+            // saturdayTransactionLabel
+            // 
+            this.saturdayTransactionLabel.AutoSize = true;
+            this.saturdayTransactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saturdayTransactionLabel.ForeColor = System.Drawing.Color.Black;
+            this.saturdayTransactionLabel.Location = new System.Drawing.Point(284, 236);
+            this.saturdayTransactionLabel.Name = "saturdayTransactionLabel";
+            this.saturdayTransactionLabel.Size = new System.Drawing.Size(19, 20);
+            this.saturdayTransactionLabel.TabIndex = 53;
+            this.saturdayTransactionLabel.Text = "--";
+            // 
+            // saturdayCountLabel
+            // 
+            this.saturdayCountLabel.AutoSize = true;
+            this.saturdayCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saturdayCountLabel.ForeColor = System.Drawing.Color.Black;
+            this.saturdayCountLabel.Location = new System.Drawing.Point(157, 237);
+            this.saturdayCountLabel.Name = "saturdayCountLabel";
+            this.saturdayCountLabel.Size = new System.Drawing.Size(19, 20);
+            this.saturdayCountLabel.TabIndex = 52;
+            this.saturdayCountLabel.Text = "--";
+            // 
+            // fridayTransactionLabel
+            // 
+            this.fridayTransactionLabel.AutoSize = true;
+            this.fridayTransactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fridayTransactionLabel.ForeColor = System.Drawing.Color.Black;
+            this.fridayTransactionLabel.Location = new System.Drawing.Point(284, 210);
+            this.fridayTransactionLabel.Name = "fridayTransactionLabel";
+            this.fridayTransactionLabel.Size = new System.Drawing.Size(19, 20);
+            this.fridayTransactionLabel.TabIndex = 51;
+            this.fridayTransactionLabel.Text = "--";
+            // 
+            // fridayCountLabel
+            // 
+            this.fridayCountLabel.AutoSize = true;
+            this.fridayCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fridayCountLabel.ForeColor = System.Drawing.Color.Black;
+            this.fridayCountLabel.Location = new System.Drawing.Point(157, 210);
+            this.fridayCountLabel.Name = "fridayCountLabel";
+            this.fridayCountLabel.Size = new System.Drawing.Size(19, 20);
+            this.fridayCountLabel.TabIndex = 50;
+            this.fridayCountLabel.Text = "--";
+            // 
+            // thursdayTransactionLabel
+            // 
+            this.thursdayTransactionLabel.AutoSize = true;
+            this.thursdayTransactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thursdayTransactionLabel.ForeColor = System.Drawing.Color.Black;
+            this.thursdayTransactionLabel.Location = new System.Drawing.Point(284, 179);
+            this.thursdayTransactionLabel.Name = "thursdayTransactionLabel";
+            this.thursdayTransactionLabel.Size = new System.Drawing.Size(19, 20);
+            this.thursdayTransactionLabel.TabIndex = 49;
+            this.thursdayTransactionLabel.Text = "--";
+            // 
+            // thursdayCountLabel
+            // 
+            this.thursdayCountLabel.AutoSize = true;
+            this.thursdayCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thursdayCountLabel.ForeColor = System.Drawing.Color.Black;
+            this.thursdayCountLabel.Location = new System.Drawing.Point(157, 179);
+            this.thursdayCountLabel.Name = "thursdayCountLabel";
+            this.thursdayCountLabel.Size = new System.Drawing.Size(19, 20);
+            this.thursdayCountLabel.TabIndex = 48;
+            this.thursdayCountLabel.Text = "--";
+            // 
+            // wednesdayTransactionLabel
+            // 
+            this.wednesdayTransactionLabel.AutoSize = true;
+            this.wednesdayTransactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wednesdayTransactionLabel.ForeColor = System.Drawing.Color.Black;
+            this.wednesdayTransactionLabel.Location = new System.Drawing.Point(284, 149);
+            this.wednesdayTransactionLabel.Name = "wednesdayTransactionLabel";
+            this.wednesdayTransactionLabel.Size = new System.Drawing.Size(19, 20);
+            this.wednesdayTransactionLabel.TabIndex = 47;
+            this.wednesdayTransactionLabel.Text = "--";
+            // 
+            // wednesdayCountLabel
+            // 
+            this.wednesdayCountLabel.AutoSize = true;
+            this.wednesdayCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.wednesdayCountLabel.ForeColor = System.Drawing.Color.Black;
+            this.wednesdayCountLabel.Location = new System.Drawing.Point(157, 149);
+            this.wednesdayCountLabel.Name = "wednesdayCountLabel";
+            this.wednesdayCountLabel.Size = new System.Drawing.Size(19, 20);
+            this.wednesdayCountLabel.TabIndex = 46;
+            this.wednesdayCountLabel.Text = "--";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(23, 238);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(73, 20);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "Saturday";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(23, 210);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(52, 20);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "Friday";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(23, 179);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 20);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "Thursday";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(23, 148);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(93, 20);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "Wednesday";
             // 
             // panel2
             // 
@@ -324,20 +456,22 @@ namespace CourseworkAD
             // 
             // weeklyReportChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.weeklyReportChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.weeklyReportChart.Legends.Add(legend3);
+            this.weeklyReportChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            this.weeklyReportChart.BorderlineWidth = 2;
+            chartArea1.Name = "ChartArea1";
+            this.weeklyReportChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.weeklyReportChart.Legends.Add(legend1);
             this.weeklyReportChart.Location = new System.Drawing.Point(410, 112);
             this.weeklyReportChart.Name = "weeklyReportChart";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Income";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Count";
-            this.weeklyReportChart.Series.Add(series5);
-            this.weeklyReportChart.Series.Add(series6);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Income";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Count";
+            this.weeklyReportChart.Series.Add(series1);
+            this.weeklyReportChart.Series.Add(series2);
             this.weeklyReportChart.Size = new System.Drawing.Size(375, 247);
             this.weeklyReportChart.TabIndex = 23;
             this.weeklyReportChart.Text = "chart1";
@@ -354,138 +488,6 @@ namespace CourseworkAD
             this.getReport.Text = "Get Report";
             this.getReport.UseVisualStyleBackColor = false;
             this.getReport.Click += new System.EventHandler(this.getReport_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(23, 148);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(93, 20);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "Wednesday";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(23, 179);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 20);
-            this.label13.TabIndex = 43;
-            this.label13.Text = "Thursday";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(23, 210);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(52, 20);
-            this.label14.TabIndex = 44;
-            this.label14.Text = "Friday";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(23, 238);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(73, 20);
-            this.label15.TabIndex = 45;
-            this.label15.Text = "Saturday";
-            // 
-            // wednesdayCountLabel
-            // 
-            this.wednesdayCountLabel.AutoSize = true;
-            this.wednesdayCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wednesdayCountLabel.ForeColor = System.Drawing.Color.Black;
-            this.wednesdayCountLabel.Location = new System.Drawing.Point(157, 149);
-            this.wednesdayCountLabel.Name = "wednesdayCountLabel";
-            this.wednesdayCountLabel.Size = new System.Drawing.Size(19, 20);
-            this.wednesdayCountLabel.TabIndex = 46;
-            this.wednesdayCountLabel.Text = "--";
-            // 
-            // wednesdayTransactionLabel
-            // 
-            this.wednesdayTransactionLabel.AutoSize = true;
-            this.wednesdayTransactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wednesdayTransactionLabel.ForeColor = System.Drawing.Color.Black;
-            this.wednesdayTransactionLabel.Location = new System.Drawing.Point(284, 149);
-            this.wednesdayTransactionLabel.Name = "wednesdayTransactionLabel";
-            this.wednesdayTransactionLabel.Size = new System.Drawing.Size(19, 20);
-            this.wednesdayTransactionLabel.TabIndex = 47;
-            this.wednesdayTransactionLabel.Text = "--";
-            // 
-            // thursdayCountLabel
-            // 
-            this.thursdayCountLabel.AutoSize = true;
-            this.thursdayCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thursdayCountLabel.ForeColor = System.Drawing.Color.Black;
-            this.thursdayCountLabel.Location = new System.Drawing.Point(157, 179);
-            this.thursdayCountLabel.Name = "thursdayCountLabel";
-            this.thursdayCountLabel.Size = new System.Drawing.Size(19, 20);
-            this.thursdayCountLabel.TabIndex = 48;
-            this.thursdayCountLabel.Text = "--";
-            // 
-            // thursdayTransactionLabel
-            // 
-            this.thursdayTransactionLabel.AutoSize = true;
-            this.thursdayTransactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thursdayTransactionLabel.ForeColor = System.Drawing.Color.Black;
-            this.thursdayTransactionLabel.Location = new System.Drawing.Point(284, 179);
-            this.thursdayTransactionLabel.Name = "thursdayTransactionLabel";
-            this.thursdayTransactionLabel.Size = new System.Drawing.Size(19, 20);
-            this.thursdayTransactionLabel.TabIndex = 49;
-            this.thursdayTransactionLabel.Text = "--";
-            // 
-            // fridayCountLabel
-            // 
-            this.fridayCountLabel.AutoSize = true;
-            this.fridayCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fridayCountLabel.ForeColor = System.Drawing.Color.Black;
-            this.fridayCountLabel.Location = new System.Drawing.Point(157, 210);
-            this.fridayCountLabel.Name = "fridayCountLabel";
-            this.fridayCountLabel.Size = new System.Drawing.Size(19, 20);
-            this.fridayCountLabel.TabIndex = 50;
-            this.fridayCountLabel.Text = "--";
-            // 
-            // fridayTransactionLabel
-            // 
-            this.fridayTransactionLabel.AutoSize = true;
-            this.fridayTransactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fridayTransactionLabel.ForeColor = System.Drawing.Color.Black;
-            this.fridayTransactionLabel.Location = new System.Drawing.Point(284, 210);
-            this.fridayTransactionLabel.Name = "fridayTransactionLabel";
-            this.fridayTransactionLabel.Size = new System.Drawing.Size(19, 20);
-            this.fridayTransactionLabel.TabIndex = 51;
-            this.fridayTransactionLabel.Text = "--";
-            // 
-            // saturdayCountLabel
-            // 
-            this.saturdayCountLabel.AutoSize = true;
-            this.saturdayCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saturdayCountLabel.ForeColor = System.Drawing.Color.Black;
-            this.saturdayCountLabel.Location = new System.Drawing.Point(157, 237);
-            this.saturdayCountLabel.Name = "saturdayCountLabel";
-            this.saturdayCountLabel.Size = new System.Drawing.Size(19, 20);
-            this.saturdayCountLabel.TabIndex = 52;
-            this.saturdayCountLabel.Text = "--";
-            // 
-            // saturdayTransactionLabel
-            // 
-            this.saturdayTransactionLabel.AutoSize = true;
-            this.saturdayTransactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saturdayTransactionLabel.ForeColor = System.Drawing.Color.Black;
-            this.saturdayTransactionLabel.Location = new System.Drawing.Point(284, 236);
-            this.saturdayTransactionLabel.Name = "saturdayTransactionLabel";
-            this.saturdayTransactionLabel.Size = new System.Drawing.Size(19, 20);
-            this.saturdayTransactionLabel.TabIndex = 53;
-            this.saturdayTransactionLabel.Text = "--";
             // 
             // WeeklyReportForm
             // 

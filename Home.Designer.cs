@@ -130,10 +130,10 @@ namespace CourseworkAD
             this.homePanel.Controls.Add(this.panel5);
             this.homePanel.Controls.Add(this.panel2);
             this.homePanel.Font = new System.Drawing.Font("Segoe UI Historic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.homePanel.Location = new System.Drawing.Point(0, 1);
+            this.homePanel.Location = new System.Drawing.Point(0, 13);
             this.homePanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(933, 506);
+            this.homePanel.Size = new System.Drawing.Size(933, 494);
             this.homePanel.TabIndex = 1;
             this.homePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.homePanel_Paint);
             // 
@@ -214,10 +214,10 @@ namespace CourseworkAD
             // 
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.ticketData);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 85);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(933, 421);
+            this.panel5.Size = new System.Drawing.Size(933, 494);
             this.panel5.TabIndex = 3;
             // 
             // ticketData
@@ -226,9 +226,9 @@ namespace CourseworkAD
             this.ticketData.AllowUserToDeleteRows = false;
             this.ticketData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ticketData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ticketData.Location = new System.Drawing.Point(0, 129);
+            this.ticketData.Location = new System.Drawing.Point(0, 34);
             this.ticketData.Name = "ticketData";
-            this.ticketData.Size = new System.Drawing.Size(933, 292);
+            this.ticketData.Size = new System.Drawing.Size(933, 460);
             this.ticketData.TabIndex = 27;
             this.ticketData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketData_CellContentClick);
             // 
@@ -236,7 +236,7 @@ namespace CourseworkAD
             // 
             this.viewRecordButton.AutoSize = true;
             this.viewRecordButton.Font = new System.Drawing.Font("Segoe UI Historic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewRecordButton.Location = new System.Drawing.Point(516, 3);
+            this.viewRecordButton.Location = new System.Drawing.Point(503, 3);
             this.viewRecordButton.Name = "viewRecordButton";
             this.viewRecordButton.Size = new System.Drawing.Size(126, 25);
             this.viewRecordButton.TabIndex = 4;
@@ -272,7 +272,7 @@ namespace CourseworkAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 559);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.homePanel);
