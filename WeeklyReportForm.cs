@@ -22,9 +22,11 @@ namespace CourseworkAD
 
         }
 
+
         List<Record> recordData = new List<Record>();
 
       
+        //This is an event listener method of get report button
         private void getReport_Click(object sender, EventArgs e)
         {
 
@@ -32,6 +34,7 @@ namespace CourseworkAD
 
         }
 
+        
         private void WeeklyReportForm_Load(object sender, EventArgs e)
         {
 
@@ -52,19 +55,22 @@ namespace CourseworkAD
 
         }
 
+
         private void fromDateTimeValue_ValueChanged(object sender, EventArgs e)
         {
             DateTime newDate = fromDateTimeValue.Value;
-
             toDateTimeValue.Value = newDate.AddDays(6);
 
         }
+
 
         private void toDateTimeValue_ValueChanged(object sender, EventArgs e)
         {
 
         }
 
+
+        //This is a static method used shows data into the graph
         public static void weeklyReport(DateTime from)
         {
 
@@ -135,7 +141,6 @@ namespace CourseworkAD
                         }
                     }
                 }
-
             }
             foreach (string key in totalCounts.Keys)
             {
@@ -152,7 +157,7 @@ namespace CourseworkAD
 
 
 
-
+        //This method retrieve data and add value to label
         public void retrieveData()
         {
             weeklyReportChart.Series["Count"].Points.Clear();
@@ -161,11 +166,13 @@ namespace CourseworkAD
             DateTime fromDate = fromDateTimeValue.Value;
             weeklyReport(fromDate);
             weeklyReportBubbleSort(GlobalVariable.reportList);
+
             foreach ( Report r in GlobalVariable.reportList)
             {
                 weeklyReportChart.Series["Count"].Points.AddXY(r.days, r.detailsOfCustomer[0]);
                 weeklyReportChart.Series["Income"].Points.AddXY(r.days, r.detailsOfCustomer[1]);
             }
+
             for (int i = 0; i < GlobalVariable.reportList.Count; i++)
             {
                 if (GlobalVariable.reportList[i].days == "Sunday")
@@ -208,6 +215,7 @@ namespace CourseworkAD
         }
 
 
+        //This method sort the data using Bubble Sort Algorithm
 
         static void weeklyReportBubbleSort(List<Report> list)
         {

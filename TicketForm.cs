@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace CourseworkAD
 {
@@ -18,6 +20,7 @@ namespace CourseworkAD
             InitializeComponent();
         }
 
+        //This method load ticket form data when this application start
         private void TicketForm_Load(object sender, EventArgs e)
         {
             ticketData.ColumnCount = 8;
@@ -33,27 +36,32 @@ namespace CourseworkAD
 
             foreach (var ticket in GlobalClass.tickets) {
 
-                ticketData.Rows.Add(ticket.id,ticket.category,ticket.type,ticket.rateOneHr,ticket.rateTwoHr,ticket.rateThreeHr,ticket.rateFourHr,ticket.rateWholeDay);
+                ticketData.Rows.Add(ticket.id,
+                                    ticket.category,
+                                    ticket.type,
+                                    ticket.rateOneHr,
+                                    ticket.rateTwoHr,
+                                    ticket.rateThreeHr,
+                                    ticket.rateFourHr,
+                                    ticket.rateWholeDay);
             }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-
-            
-            
-
         }
 
+        
+        //This method update the edited data in cell to the csv file
         private void ticketData_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             var updatedData = Convert.ToInt32(ticketData.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
             UpdateCSVFile(e.RowIndex, e.ColumnIndex, updatedData);
         }
 
-        //this method update csv file edited in table
+
+        //This method update csv file edited in table
         public void UpdateCSVFile(int rowIndex, int columnIndex, int value)
         {
             string[] csvData = File.ReadAllLines("F:\\Cw_Ad\\TicketRate.csv");
@@ -61,8 +69,8 @@ namespace CourseworkAD
 
             var record = csvData[rowIndex].Split(',');
             record[columnIndex] = value.ToString();
-
             var updatedRow = "";
+
             for (int j = 0; j < record.Length; j++)
             {
                 if (j == record.Length - 1)
@@ -90,6 +98,10 @@ namespace CourseworkAD
                     updatedCsv += csvData[i] + "\n";
                 }
             }
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("F:\\Cw_Ad\\TicketRate.csv",FileMode.Create,FileAccess.Write);
+            formatter.Serialize(stream,updatedCsv);
+            stream.Close();
 
             File.WriteAllText("F:\\Cw_Ad\\TicketRate.csv", updatedCsv);
         }

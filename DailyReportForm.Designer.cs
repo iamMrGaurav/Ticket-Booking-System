@@ -29,10 +29,10 @@ namespace CourseworkAD
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dailyDate = new System.Windows.Forms.DateTimePicker();
@@ -53,6 +53,9 @@ namespace CourseworkAD
             this.panel2 = new System.Windows.Forms.Panel();
             this.dailyReportChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.getDailyReport = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.totalCountLabel = new System.Windows.Forms.Label();
+            this.totalTransactionLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dailyReportChart)).BeginInit();
@@ -62,7 +65,7 @@ namespace CourseworkAD
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(285, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 33);
@@ -73,7 +76,7 @@ namespace CourseworkAD
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(23, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 24);
@@ -91,7 +94,7 @@ namespace CourseworkAD
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(72, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 24);
@@ -233,6 +236,9 @@ namespace CourseworkAD
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(212)))), ((int)(((byte)(206)))));
+            this.panel1.Controls.Add(this.totalTransactionLabel);
+            this.panel1.Controls.Add(this.totalCountLabel);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.groupTransactionLabel);
             this.panel1.Controls.Add(this.childrenTransactionLabel);
@@ -245,7 +251,7 @@ namespace CourseworkAD
             this.panel1.Controls.Add(this.label9);
             this.panel1.Location = new System.Drawing.Point(12, 131);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 185);
+            this.panel1.Size = new System.Drawing.Size(374, 201);
             this.panel1.TabIndex = 31;
             // 
             // panel2
@@ -265,20 +271,20 @@ namespace CourseworkAD
             this.dailyReportChart.BorderlineColor = System.Drawing.Color.Black;
             this.dailyReportChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.dailyReportChart.BorderlineWidth = 2;
-            chartArea2.Name = "ChartArea1";
-            this.dailyReportChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.dailyReportChart.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.dailyReportChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.dailyReportChart.Legends.Add(legend1);
             this.dailyReportChart.Location = new System.Drawing.Point(418, 92);
             this.dailyReportChart.Name = "dailyReportChart";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Income";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Count";
-            this.dailyReportChart.Series.Add(series3);
-            this.dailyReportChart.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Income";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Count";
+            this.dailyReportChart.Series.Add(series1);
+            this.dailyReportChart.Series.Add(series2);
             this.dailyReportChart.Size = new System.Drawing.Size(370, 250);
             this.dailyReportChart.TabIndex = 32;
             this.dailyReportChart.Text = "chart1";
@@ -296,11 +302,44 @@ namespace CourseworkAD
             this.getDailyReport.UseVisualStyleBackColor = false;
             this.getDailyReport.Click += new System.EventHandler(this.getDailyReport_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(23, 170);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 20);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "Total";
+            // 
+            // totalCountLabel
+            // 
+            this.totalCountLabel.AutoSize = true;
+            this.totalCountLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCountLabel.ForeColor = System.Drawing.Color.Black;
+            this.totalCountLabel.Location = new System.Drawing.Point(155, 160);
+            this.totalCountLabel.Name = "totalCountLabel";
+            this.totalCountLabel.Size = new System.Drawing.Size(32, 31);
+            this.totalCountLabel.TabIndex = 45;
+            this.totalCountLabel.Text = "--";
+            // 
+            // totalTransactionLabel
+            // 
+            this.totalTransactionLabel.AutoSize = true;
+            this.totalTransactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTransactionLabel.ForeColor = System.Drawing.Color.Black;
+            this.totalTransactionLabel.Location = new System.Drawing.Point(281, 159);
+            this.totalTransactionLabel.Name = "totalTransactionLabel";
+            this.totalTransactionLabel.Size = new System.Drawing.Size(32, 31);
+            this.totalTransactionLabel.TabIndex = 46;
+            this.totalTransactionLabel.Text = "--";
+            // 
             // DailyReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.getDailyReport);
             this.Controls.Add(this.dailyReportChart);
@@ -346,5 +385,8 @@ namespace CourseworkAD
         private System.Windows.Forms.Button getReport;
         private System.Windows.Forms.Button getDailyReport;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label totalTransactionLabel;
+        private System.Windows.Forms.Label totalCountLabel;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -18,14 +18,15 @@ namespace CourseworkAD
             InitializeComponent();
         }
         
+        //This method is for login button 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            //Check if field is empty or not
             if (usernameTextBox.Text != "" && passTextBox.Text != "")
             {
-
+                //Check username and password
                 if (usernameTextBox.Text == "admin" && passTextBox.Text == "admin")
                 {
-
                     GlobalVariable.isAdmin = true;
                     obj.Show();
                     this.Hide();
@@ -42,6 +43,7 @@ namespace CourseworkAD
             
         }
 
+        //This skip button method shows home page 
         private void skipButton_Click(object sender, EventArgs e)
         {
             obj.Show();

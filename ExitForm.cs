@@ -18,8 +18,14 @@ namespace CourseworkAD
             InitializeComponent();
         }
 
-
+        //Object of record 
         Record record = null;
+
+        /*
+         
+         This method search detaile according to id enter by user.
+
+         */
         private void button1_Click(object sender, EventArgs e)
         {
             try {
@@ -49,7 +55,7 @@ namespace CourseworkAD
                         confirmButton.Visible = false;
                     }
 
-             
+                        //Data initialize from record class to label texts
                         idTextBox.Text = record.idRecord.ToString();
                         categoryLabel.Text = record.categoryRecord;
                         typeLabel.Text = record.typeRecord;
@@ -78,6 +84,7 @@ namespace CourseworkAD
 
 
 
+        //This method return Cost According To Duration
         public int getCostAccordingToDuration(int duration, string type, string category)
         {
             TicketModel ticket = null;
@@ -114,10 +121,7 @@ namespace CourseworkAD
                 }
 
             }
-            /*else {
-                MessageBox.Show("Data unavailable");
-            
-            }*/
+          
             return Convert.ToInt32(ticketRate);
         }
 
@@ -131,26 +135,20 @@ namespace CourseworkAD
 
         }
 
+       /* This method is for confirm button
+          Data is updated to CSV file if user click on confirm button. 
+      */
         private void confirmButton_Click(object sender, EventArgs e)
         {
-           
-               
             if (record != null)
             {
-               
-
                     foreach (Record data in GlobalVariable.records)
                     {
                         if (data.idRecord == record.idRecord)
                         {
-
                             record.isLeftRecord = true;
-
                     }
-
                 }
-
-              
                 string updatedCsv = "";
                 for (int i = 0; i < GlobalVariable.records.Count; i++)
                 {
@@ -158,36 +156,39 @@ namespace CourseworkAD
                     if (i == GlobalVariable.records.Count - 1)
                     {
 
-                        updatedCsv += r.idRecord + "," + r.categoryRecord + "," + r.typeRecord + "," + r.countRecord + "," + r.entryTimeRecord + "," + r.exitTimeRecord + "," + r.entryCostRecord + "," + r.isLeftRecord;
-
+                        updatedCsv += r.idRecord + ","
+                                    + r.categoryRecord + ","
+                                    + r.typeRecord + ","
+                                    + r.countRecord + "," 
+                                    + r.entryTimeRecord + "," 
+                                    + r.exitTimeRecord + ","
+                                    + r.entryCostRecord + ","
+                                    + r.isLeftRecord;
                     }
                     else
                     {
-
-                        updatedCsv += r.idRecord + "," + r.categoryRecord + "," + r.typeRecord + "," + r.countRecord + "," + r.entryTimeRecord + "," + r.exitTimeRecord + "," + r.entryCostRecord + "," + r.isLeftRecord + "\n";
-
-
+                        updatedCsv += r.idRecord + "," 
+                            + r.categoryRecord + "," 
+                            + r.typeRecord + "," 
+                            + r.countRecord + ","
+                            + r.entryTimeRecord + "," 
+                            + r.exitTimeRecord + "," 
+                            + r.entryCostRecord + "," 
+                            + r.isLeftRecord + "\n";
                     }
 
                 }
                 if (updatedCsv != "")
                 {
-
                     File.WriteAllText("F:\\Cw_Ad\\DataRecord.csv", updatedCsv);
                     MessageBox.Show("Exit Confirmed");
                     confirmButton.Visible = false;
-
                 }
 
             }
             else {
-
                 MessageBox.Show("Enter existed Id to confirm");
-            
             }
-            
-
-
         }
     }
 }

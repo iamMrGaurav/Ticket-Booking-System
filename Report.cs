@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CourseworkAD
 {
+    //Report of Class
     class Report
     {
+        //Getter and Setter for days, income, details of customer
         public string days { get; set; }
         public double income { get; set; }
 

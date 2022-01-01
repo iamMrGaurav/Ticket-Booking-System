@@ -173,7 +173,7 @@ namespace CourseworkAD
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(21, 128);
+            this.panel1.Location = new System.Drawing.Point(12, 115);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(374, 266);
             this.panel1.TabIndex = 22;

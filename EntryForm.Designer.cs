@@ -133,8 +133,8 @@ namespace CourseworkAD
             this.insertRecord.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.insertRecord.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.insertRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertRecord.ForeColor = System.Drawing.Color.Black;
-            this.insertRecord.Location = new System.Drawing.Point(61, 297);
+            this.insertRecord.ForeColor = System.Drawing.Color.White;
+            this.insertRecord.Location = new System.Drawing.Point(74, 286);
             this.insertRecord.Name = "insertRecord";
             this.insertRecord.Size = new System.Drawing.Size(75, 33);
             this.insertRecord.TabIndex = 8;

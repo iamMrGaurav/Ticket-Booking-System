@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace CourseworkAD
 {
+    [Serializable]
+
+    //Ticket Model Class
     class TicketModel
     {
-      public int id { get; set; }
+
+       //Getter and Setter method 
+        public int id { get; set; }
         public string category { get; set; }
 
         public string type { get; set; }

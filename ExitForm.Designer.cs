@@ -214,7 +214,7 @@ namespace CourseworkAD
             this.searchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(158)))), ((int)(((byte)(163)))));
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.White;
-            this.searchButton.Location = new System.Drawing.Point(280, 38);
+            this.searchButton.Location = new System.Drawing.Point(276, 33);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(82, 34);
             this.searchButton.TabIndex = 18;

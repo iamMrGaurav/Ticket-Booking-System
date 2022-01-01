@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CourseworkAD
 {
+    //Class of Record
     class Record
     {
+        //Getter and Setter for id, category, type, count, entrytime, exit time, cost and isleftrecord
         public int idRecord { get; set; }
         public String categoryRecord { get; set; }
         public String typeRecord { get; set; }

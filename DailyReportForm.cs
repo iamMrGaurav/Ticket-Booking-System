@@ -18,6 +18,8 @@ namespace CourseworkAD
         }
 
         List<Record> recordData = new List<Record>();
+
+        //This function get the matching date
         public void getDate() {
 
             DateTime date = (dailyDate.Value);
@@ -29,6 +31,7 @@ namespace CourseworkAD
             }
         }
 
+        //This get Report button method shows daily report 
         private void getDailyReport_Click(object sender, EventArgs e)
         {
             dailyReportChart.Series["Count"].Points.Clear();
@@ -80,6 +83,7 @@ namespace CourseworkAD
             
             }
 
+
             for (int i = 0; i< typeList.Count; i++) {
 
                 dailyReportChart.Series["Count"].Points.AddXY(typeList[i], countType[i]);
@@ -87,13 +91,16 @@ namespace CourseworkAD
 
             }
 
+
             adultCountLabel.Text = Convert.ToInt32(countType[0]).ToString();
             groupCountLabel.Text = Convert.ToInt32(countType[1]).ToString();
             childrenCountLabel.Text = Convert.ToInt32(countType[2]).ToString();
+            totalCountLabel.Text = Convert.ToInt32(countType[0] + countType[1] + countType[2]).ToString();
 
             adultTransactionLabel.Text = Convert.ToInt32(incomeType[0]).ToString();
             groupTransactionLabel.Text = Convert.ToInt32(incomeType[1]).ToString();
             childrenTransactionLabel.Text = Convert.ToInt32(incomeType[2]).ToString();
+            totalTransactionLabel.Text = Convert.ToInt32(incomeType[0] + incomeType[1] + incomeType[2]).ToString();
 
 
         }
