@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.DataFormats;
 
 namespace CourseworkAD
 {
@@ -23,7 +15,7 @@ namespace CourseworkAD
         {
 
         }
-        
+
         private void skipButton_Click(object sender, EventArgs e)
         {
 
@@ -33,11 +25,11 @@ namespace CourseworkAD
         {
 
         }
-        
+
         private void loginButton_Click(object sender, EventArgs e)
         {
-            
-            
+
+
 
         }
 
@@ -54,7 +46,8 @@ namespace CourseworkAD
                 value++;
                 progressBar1.Value = value;
             }
-            else {
+            else
+            {
                 timer1.Stop();
                 new LoginScreen().Show();
                 this.Hide();

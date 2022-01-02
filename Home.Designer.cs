@@ -32,6 +32,7 @@ namespace CourseworkAD
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.homeMenusStripButton = new System.Windows.Forms.ToolStripMenuItem();
             this.entryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,7 +47,6 @@ namespace CourseworkAD
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.homePanel = new System.Windows.Forms.Panel();
-            this.homeMenusStripButton = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -75,6 +75,14 @@ namespace CourseworkAD
             this.menuStrip1.Size = new System.Drawing.Size(875, 51);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // homeMenusStripButton
+            // 
+            this.homeMenusStripButton.Image = ((System.Drawing.Image)(resources.GetObject("homeMenusStripButton.Image")));
+            this.homeMenusStripButton.Name = "homeMenusStripButton";
+            this.homeMenusStripButton.Size = new System.Drawing.Size(80, 47);
+            this.homeMenusStripButton.Text = "Home";
+            this.homeMenusStripButton.Click += new System.EventHandler(this.homeMenusStripButton_Click);
             // 
             // entryToolStripMenuItem
             // 
@@ -203,15 +211,7 @@ namespace CourseworkAD
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(933, 494);
             this.homePanel.TabIndex = 1;
-            this.homePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.homePanel_Paint);
-            // 
-            // homeMenusStripButton
-            // 
-            this.homeMenusStripButton.Image = ((System.Drawing.Image)(resources.GetObject("homeMenusStripButton.Image")));
-            this.homeMenusStripButton.Name = "homeMenusStripButton";
-            this.homeMenusStripButton.Size = new System.Drawing.Size(80, 47);
-            this.homeMenusStripButton.Text = "Home";
-            this.homeMenusStripButton.Click += new System.EventHandler(this.homeMenusStripButton_Click);
+          
             // 
             // Home
             // 
@@ -225,7 +225,6 @@ namespace CourseworkAD
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximumSize = new System.Drawing.Size(949, 598);
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(949, 598);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -62,10 +62,10 @@ namespace CourseworkAD
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(106, 97);
+            this.dataGridView.Location = new System.Drawing.Point(12, 97);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(604, 301);
+            this.dataGridView.Size = new System.Drawing.Size(776, 301);
             this.dataGridView.TabIndex = 2;
             // 
             // HomePage
@@ -80,6 +80,7 @@ namespace CourseworkAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePage";
             this.Text = "HomePage";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourseworkAD
@@ -17,7 +10,7 @@ namespace CourseworkAD
         {
             InitializeComponent();
         }
-        
+
         //This method is for login button 
         private void loginButton_Click(object sender, EventArgs e)
         {
@@ -36,11 +29,12 @@ namespace CourseworkAD
                     MessageBox.Show("Inavlid Fields");
                 }
             }
-            else {
+            else
+            {
                 MessageBox.Show("Please Fill the empty fields");
             }
-           
-            
+
+
         }
 
         //This skip button method shows home page 
@@ -50,9 +44,6 @@ namespace CourseworkAD
             this.Hide();
         }
 
-        private void LoginScreen_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

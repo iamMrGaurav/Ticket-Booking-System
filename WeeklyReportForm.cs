@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourseworkAD
@@ -17,41 +11,12 @@ namespace CourseworkAD
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         List<Record> recordData = new List<Record>();
 
-      
         //This is an event listener method of get report button
         private void getReport_Click(object sender, EventArgs e)
         {
-
             retrieveData();
-
-        }
-
-        
-        private void WeeklyReportForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -63,11 +28,6 @@ namespace CourseworkAD
 
         }
 
-
-        private void toDateTimeValue_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
         //This is a static method used shows data into the graph
@@ -167,7 +127,7 @@ namespace CourseworkAD
             weeklyReport(fromDate);
             weeklyReportBubbleSort(GlobalVariable.reportList);
 
-            foreach ( Report r in GlobalVariable.reportList)
+            foreach (Report r in GlobalVariable.reportList)
             {
                 weeklyReportChart.Series["Count"].Points.AddXY(r.days, r.detailsOfCustomer[0]);
                 weeklyReportChart.Series["Income"].Points.AddXY(r.days, r.detailsOfCustomer[1]);
@@ -194,7 +154,7 @@ namespace CourseworkAD
                 else if (GlobalVariable.reportList[i].days == "Wednesday")
                 {
                     wednesdayCountLabel.Text = GlobalVariable.reportList[i].detailsOfCustomer[0].ToString();
-                   wednesdayTransactionLabel.Text = GlobalVariable.reportList[i].detailsOfCustomer[1].ToString();
+                    wednesdayTransactionLabel.Text = GlobalVariable.reportList[i].detailsOfCustomer[1].ToString();
                 }
                 else if (GlobalVariable.reportList[i].days == "Thursday")
                 {
@@ -216,7 +176,6 @@ namespace CourseworkAD
 
 
         //This method sort the data using Bubble Sort Algorithm
-
         static void weeklyReportBubbleSort(List<Report> list)
         {
             int listCount = list.Count;
@@ -236,13 +195,6 @@ namespace CourseworkAD
         }
 
 
-
-
-
-
-        
-
-        
     }
 }
 

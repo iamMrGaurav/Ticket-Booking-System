@@ -32,6 +32,7 @@ namespace CourseworkAD
             this.panel2 = new System.Windows.Forms.Panel();
             this.ticketData = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketData)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +57,7 @@ namespace CourseworkAD
             this.ticketData.Name = "ticketData";
             this.ticketData.Size = new System.Drawing.Size(709, 263);
             this.ticketData.TabIndex = 26;
-            this.ticketData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketData_CellContentClick);
+        
             this.ticketData.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.ticketData_CellEndEdit);
             // 
             // label2
@@ -70,12 +71,24 @@ namespace CourseworkAD
             this.label2.TabIndex = 25;
             this.label2.Text = "Ticket";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(483, 341);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(261, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Note : You can edit the above table.";
+            // 
             // TicketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(145)))), ((int)(((byte)(134)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TicketForm";
@@ -85,6 +98,7 @@ namespace CourseworkAD
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketData)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -93,5 +107,6 @@ namespace CourseworkAD
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView ticketData;
+        private System.Windows.Forms.Label label1;
     }
 }

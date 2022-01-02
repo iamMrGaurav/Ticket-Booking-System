@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourseworkAD
@@ -28,17 +21,18 @@ namespace CourseworkAD
          */
         private void button1_Click(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 int ID = Convert.ToInt32(idTextBox.Text);
-                
+
                 foreach (Record data in GlobalVariable.records)
                 {
                     if (data.idRecord == ID)
                     {
                         record = data;
-                        
+
                     }
-                    
+
                 }
 
                 if (record != null)
@@ -50,24 +44,25 @@ namespace CourseworkAD
 
 
                     }
-                    else {
+                    else
+                    {
 
                         confirmButton.Visible = false;
                     }
 
-                        //Data initialize from record class to label texts
-                        idTextBox.Text = record.idRecord.ToString();
-                        categoryLabel.Text = record.categoryRecord;
-                        typeLabel.Text = record.typeRecord;
-                        countLabel.Text = record.countRecord.ToString();
-                        entryTimeLabel.Text = record.entryTimeRecord.ToString();
-                        exitTimeLabel.Text = record.exitTimeRecord.ToString();
-                        var duration = (record.exitTimeRecord - record.entryTimeRecord);
-                        durationLabel.Text = Convert.ToInt32(duration.TotalMinutes).ToString() + " " + "min";
-                        costLabel.Text = getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString();
-                        record.entryCostRecord = Convert.ToDouble(getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString());
-                        
-             
+                    //Data initialize from record class to label texts
+                    idTextBox.Text = record.idRecord.ToString();
+                    categoryLabel.Text = record.categoryRecord;
+                    typeLabel.Text = record.typeRecord;
+                    countLabel.Text = record.countRecord.ToString();
+                    entryTimeLabel.Text = record.entryTimeRecord.ToString();
+                    exitTimeLabel.Text = record.exitTimeRecord.ToString();
+                    var duration = (record.exitTimeRecord - record.entryTimeRecord);
+                    durationLabel.Text = Convert.ToInt32(duration.TotalMinutes).ToString() + " " + "min";
+                    costLabel.Text = getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString();
+                    record.entryCostRecord = Convert.ToDouble(getCostAccordingToDuration(Convert.ToInt32(duration.TotalMinutes), record.typeRecord, record.categoryRecord).ToString());
+
+
                 }
                 else
                 {
@@ -76,9 +71,10 @@ namespace CourseworkAD
                 }
             }
 
-            catch (FormatException) {
+            catch (FormatException)
+            {
                 MessageBox.Show("Empty Fields Found");
-            
+
             }
         }
 
@@ -121,32 +117,24 @@ namespace CourseworkAD
                 }
 
             }
-          
+
             return Convert.ToInt32(ticketRate);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       /* This method is for confirm button
-          Data is updated to CSV file if user click on confirm button. 
-      */
+        /* This method is for confirm button
+           Data is updated to CSV file if user click on confirm button. 
+       */
         private void confirmButton_Click(object sender, EventArgs e)
         {
             if (record != null)
             {
-                    foreach (Record data in GlobalVariable.records)
+                foreach (Record data in GlobalVariable.records)
+                {
+                    if (data.idRecord == record.idRecord)
                     {
-                        if (data.idRecord == record.idRecord)
-                        {
-                            record.isLeftRecord = true;
+                        record.isLeftRecord = true;
                     }
                 }
                 string updatedCsv = "";
@@ -159,21 +147,21 @@ namespace CourseworkAD
                         updatedCsv += r.idRecord + ","
                                     + r.categoryRecord + ","
                                     + r.typeRecord + ","
-                                    + r.countRecord + "," 
-                                    + r.entryTimeRecord + "," 
+                                    + r.countRecord + ","
+                                    + r.entryTimeRecord + ","
                                     + r.exitTimeRecord + ","
                                     + r.entryCostRecord + ","
                                     + r.isLeftRecord;
                     }
                     else
                     {
-                        updatedCsv += r.idRecord + "," 
-                            + r.categoryRecord + "," 
-                            + r.typeRecord + "," 
+                        updatedCsv += r.idRecord + ","
+                            + r.categoryRecord + ","
+                            + r.typeRecord + ","
                             + r.countRecord + ","
-                            + r.entryTimeRecord + "," 
-                            + r.exitTimeRecord + "," 
-                            + r.entryCostRecord + "," 
+                            + r.entryTimeRecord + ","
+                            + r.exitTimeRecord + ","
+                            + r.entryCostRecord + ","
                             + r.isLeftRecord + "\n";
                     }
 
@@ -186,7 +174,8 @@ namespace CourseworkAD
                 }
 
             }
-            else {
+            else
+            {
                 MessageBox.Show("Enter existed Id to confirm");
             }
         }

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CourseworkAD
@@ -20,11 +14,14 @@ namespace CourseworkAD
         List<Record> recordData = new List<Record>();
 
         //This function get the matching date
-        public void getDate() {
+        public void getDate()
+        {
 
             DateTime date = (dailyDate.Value);
-            foreach (Record data in GlobalVariable.records) {
-                if (data.entryTimeRecord.ToString("yyyy-MM-dd") == date.ToString("yyyy-MM-dd")) {
+            foreach (Record data in GlobalVariable.records)
+            {
+                if (data.entryTimeRecord.ToString("yyyy-MM-dd") == date.ToString("yyyy-MM-dd"))
+                {
                     recordData.Add(data);
                 }
 
@@ -38,18 +35,18 @@ namespace CourseworkAD
             dailyReportChart.Series["Income"].Points.Clear();
             recordData.Clear();
             getDate();
-            List<String> typeList = new List<string>() { 
-            
+            List<String> typeList = new List<string>() {
+
                 "Adult",
                 "Group",
                 "Child"
-            
+
             };
 
-            List<double> incomeType = new List<double> { 
-            
+            List<double> incomeType = new List<double> {
+
                 0,0,0
-            
+
             };
 
             List<int> countType = new List<int> {
@@ -58,7 +55,8 @@ namespace CourseworkAD
 
             };
 
-            foreach (Record data in recordData) {
+            foreach (Record data in recordData)
+            {
 
                 if (data.typeRecord == "Adult")
                 {
@@ -74,17 +72,19 @@ namespace CourseworkAD
                     countType[2]++;
 
                 }
-                else {
+                else
+                {
 
                     incomeType[1] += data.entryCostRecord;
                     countType[1]++;
-                
+
                 }
-            
+
             }
 
 
-            for (int i = 0; i< typeList.Count; i++) {
+            for (int i = 0; i < typeList.Count; i++)
+            {
 
                 dailyReportChart.Series["Count"].Points.AddXY(typeList[i], countType[i]);
                 dailyReportChart.Series["Income"].Points.AddXY(typeList[i], incomeType[i]);
@@ -105,9 +105,6 @@ namespace CourseworkAD
 
         }
 
-        private void DailyReportForm_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

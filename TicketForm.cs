@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows.Forms;
 
 namespace CourseworkAD
 {
@@ -32,10 +25,10 @@ namespace CourseworkAD
             ticketData.Columns[5].Name = "Rate/3hr";
             ticketData.Columns[6].Name = "Rate/4hr";
             ticketData.Columns[7].Name = "Rate/day";
-            
 
-            foreach (var ticket in GlobalClass.tickets) {
 
+            foreach (var ticket in GlobalClass.tickets)
+            {
                 ticketData.Rows.Add(ticket.id,
                                     ticket.category,
                                     ticket.type,
@@ -43,7 +36,8 @@ namespace CourseworkAD
                                     ticket.rateTwoHr,
                                     ticket.rateThreeHr,
                                     ticket.rateFourHr,
-                                    ticket.rateWholeDay);
+                                    ticket.rateWholeDay
+                                    );
             }
 
         }
@@ -52,7 +46,7 @@ namespace CourseworkAD
         {
         }
 
-        
+
         //This method update the edited data in cell to the csv file
         private void ticketData_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
@@ -64,54 +58,58 @@ namespace CourseworkAD
         //This method update csv file edited in table
         public void UpdateCSVFile(int rowIndex, int columnIndex, int value)
         {
-            string[] csvData = File.ReadAllLines("F:\\Cw_Ad\\TicketRate.csv");
 
-
-            var record = csvData[rowIndex].Split(',');
-            record[columnIndex] = value.ToString();
-            var updatedRow = "";
-
-            for (int j = 0; j < record.Length; j++)
+            for (int i = 0; i < GlobalClass.tickets.Count; i++)
             {
-                if (j == record.Length - 1)
+
+                if (i == rowIndex)
                 {
-                    updatedRow += record[j];
+                    TicketModel ticket = GlobalClass.tickets[i];
+                    if (columnIndex == 3)
+                    {
+                        ticket.rateOneHr = value;
+
+                    }
+                    else if (columnIndex == 4)
+                    {
+
+                        ticket.rateTwoHr = value;
+
+                    }
+                    else if (columnIndex == 5)
+                    {
+
+                        ticket.rateThreeHr = value;
+
+                    }
+                    else if (columnIndex == 6)
+                    {
+
+                        ticket.rateFourHr = value;
+
+                    }
+
                 }
-                else
-                {
-                    updatedRow += record[j] + ",";
-                }
+
 
             }
 
-            csvData[rowIndex] = updatedRow;
-            string updatedCsv = "";
+            serializeData();
 
-            for (int i = 0; i < csvData.Length; i++)
-            {
-                if (i == csvData.Length - 1)
-                {
-                    updatedCsv += csvData[i];
-                }
-                else
-                {
-                    updatedCsv += csvData[i] + "\n";
-                }
-            }
+        }
+
+        //This function Serialize the data
+        public void serializeData()
+        {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("F:\\Cw_Ad\\TicketRate.csv",FileMode.Create,FileAccess.Write);
-            formatter.Serialize(stream,updatedCsv);
+            Stream stream = new FileStream("F:\\Cw_Ad\\serializeData.csv", FileMode.Create, FileAccess.Write);
+            formatter.Serialize(stream, GlobalClass.tickets);
             stream.Close();
 
-            File.WriteAllText("F:\\Cw_Ad\\TicketRate.csv", updatedCsv);
         }
 
-        private void ticketData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
-    }
+}
 
-  
+
 

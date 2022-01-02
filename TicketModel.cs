@@ -12,10 +12,10 @@ namespace CourseworkAD
     class TicketModel
     {
 
+        
        //Getter and Setter method 
         public int id { get; set; }
         public string category { get; set; }
-
         public string type { get; set; }
         public float rateOneHr { get; set; }
         public float rateTwoHr { get; set; }

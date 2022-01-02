@@ -391,7 +391,7 @@ namespace CourseworkAD
             this.label28.Size = new System.Drawing.Size(126, 33);
             this.label28.TabIndex = 29;
             this.label28.Text = "Exit Form";
-            this.label28.Click += new System.EventHandler(this.label28_Click);
+          
             // 
             // panel1
             // 
@@ -404,7 +404,7 @@ namespace CourseworkAD
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            
             // 
             // ExitForm
             // 

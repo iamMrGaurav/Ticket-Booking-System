@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace CourseworkAD
@@ -20,6 +16,7 @@ namespace CourseworkAD
         }
 
 
+        //This function ovveride the existing function close the application
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
@@ -45,33 +42,27 @@ namespace CourseworkAD
             }
 
 
-            //Store TicketRate.csv data into the ticketRates list
-            string[] ticketRates = File.ReadAllLines("F:\\Cw_Ad\\TicketRate.csv");
+
 
             //Clear the previous ticket data
             GlobalClass.tickets.Clear();
 
 
-            for (int i = 0; i < ticketRates.Length; i++)
-            {
-
-                var row = ticketRates[i].Split(',');
-
-                TicketModel ticketModel = new TicketModel
-                {
-                    id = Convert.ToInt32(row[0]),
-                    category = (row[1]),
-                    type = (row[2]),
-                    rateOneHr = Convert.ToInt32(row[3]),
-                    rateTwoHr = Convert.ToInt32(row[4]),
-                    rateThreeHr = Convert.ToInt32(row[5]),
-                    rateFourHr = Convert.ToInt32(row[6]),
-                    rateWholeDay = Convert.ToInt32(row[7])
-                };
-                GlobalClass.tickets.Add(ticketModel);
-            }
+            Deserialize();
             loadform(new HomePage());
-    
+
+        }
+
+        //This function deserialize the data
+        public void Deserialize()
+        {
+
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("F:\\Cw_Ad\\serializeData.csv", FileMode.Open, FileAccess.Read);
+            stream.Position = 0;
+            GlobalClass.tickets = (List<TicketModel>)formatter.Deserialize(stream);
+            stream.Close();
+
         }
 
 
@@ -87,10 +78,7 @@ namespace CourseworkAD
             f.Show();
         }
 
-        private void homePanel_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
 
 
@@ -157,29 +145,6 @@ namespace CourseworkAD
             time.Text = DateTime.Now.ToString();
         }
 
-        private void ticketData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        //This method add ticket data to the ticket data table
-
-
-        //This method add record data to the ticket Data table
-
-        private void ticketRateButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void viewRecordButton_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
 
 
         //This method load login screen page
@@ -188,13 +153,10 @@ namespace CourseworkAD
             this.Hide();
 
             new LoginScreen().Show();
-            
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
 
         }
+
+
 
         private void homeMenusStripButton_Click(object sender, EventArgs e)
         {
