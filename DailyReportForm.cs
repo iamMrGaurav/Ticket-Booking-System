@@ -102,7 +102,6 @@ namespace CourseworkAD
             childrenTransactionLabel.Text = Convert.ToInt32(incomeType[2]).ToString();
             totalTransactionLabel.Text = Convert.ToInt32(incomeType[0] + incomeType[1] + incomeType[2]).ToString();
 
-
         }
 
 

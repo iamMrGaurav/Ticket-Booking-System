@@ -42,9 +42,7 @@ namespace CourseworkAD
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-        }
+
 
 
         //This method update the edited data in cell to the csv file
@@ -102,12 +100,11 @@ namespace CourseworkAD
         public void serializeData()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("F:\\Cw_Ad\\serializeData.csv", FileMode.Create, FileAccess.Write);
+            Stream stream = new FileStream("F:\\Cw_Ad\\CSV files\\serializeData.csv", FileMode.Create, FileAccess.Write);
             formatter.Serialize(stream, GlobalClass.tickets);
+            
             stream.Close();
-
         }
-
     }
 }
 

@@ -62,10 +62,10 @@ namespace CourseworkAD
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 97);
+            this.dataGridView.Location = new System.Drawing.Point(27, 86);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(776, 301);
+            this.dataGridView.Size = new System.Drawing.Size(719, 255);
             this.dataGridView.TabIndex = 2;
             // 
             // HomePage

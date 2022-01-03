@@ -298,4 +298,24 @@
         GgcxJQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="closeApplication.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAFuSURBVEhL7ZVLTsNAEERjCc94chdYsULcgM+CE+XDIvxZBo5JlEWygWq7HFlNZzxOjJAgJZUU
+        e6pex5NoPDjof2s4zE9DcDe8TJZ0pMvLbvLeXxeFW8OfReHfcSurVqLKJFt13FoYvJ8mFK5QXBFAtw5v
+        Dq29EhbX43LOnaCwVIDS3rt7xr4Jaw9WB16CeczYdvFpLUBpDLhjdCP5Qla2NpiXjMaF8FiXmw4hf0VM
+        tl22983KNDwuoanyPn80IE3PaGuttDCI6yaUJxrWwRNidhMAUwVM8ZT1/SQgBY65n6G1BKgGWL5lvD8B
+        OlJDLI8Y70f4dz4ZQ0xLlrX9BNCzNSBm6bC+kzIAXixwiqUrjArVQShHDwe49QCBZ8QlSY7BuQFpevMn
+        ks9qTdnPEWt/8h96SVwwul2/9loUhXB0hsJCAVrfMsjos/1DWFxOEwrnKNbDkw98ybKzEAZvd5Nse9Lv
+        oySd5O096I9qMPgC9BkTgivyhAcAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="minimizeApplication.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAABiSURBVEhL7dBLCsAgDARQQcjnWILQE/QepbfoqdsE3ekyRYR5MMvMQBIAAGwnM/OhSmdkvNO7
+        28SEKt8i9P4R6776zIiZntlRRLy7z4yWDS97tckiUiw1OMW72wQAAOwhpQ+3anT/sZipNQAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
 </root>

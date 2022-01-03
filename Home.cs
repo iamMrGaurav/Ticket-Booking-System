@@ -29,8 +29,6 @@ namespace CourseworkAD
 
             ReadEntryRecord();
 
-
-
             // This if condition check if user is admin or not
             if (GlobalVariable.isAdmin == true)
             {
@@ -58,7 +56,7 @@ namespace CourseworkAD
         {
 
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("F:\\Cw_Ad\\serializeData.csv", FileMode.Open, FileAccess.Read);
+            Stream stream = new FileStream("F:\\Cw_Ad\\CSV files\\serializeData.csv", FileMode.Open, FileAccess.Read);
             stream.Position = 0;
             GlobalClass.tickets = (List<TicketModel>)formatter.Deserialize(stream);
             stream.Close();
@@ -116,7 +114,7 @@ namespace CourseworkAD
         //This method read dataRecord csv data and add to the class
         public void ReadEntryRecord()
         {
-            string[] record = File.ReadAllLines("F:\\Cw_Ad\\DataRecord.csv");
+            string[] record = File.ReadAllLines("F:\\Cw_Ad\\CSV files\\DataRecord.csv");
             GlobalVariable.records.Clear();
 
 

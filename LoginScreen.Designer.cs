@@ -41,10 +41,14 @@ namespace CourseworkAD
             this.label3 = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.closeApplication = new System.Windows.Forms.PictureBox();
+            this.minimizeApplication = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeApplication)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeApplication)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -163,12 +167,34 @@ namespace CourseworkAD
             this.label2.TabIndex = 14;
             this.label2.Text = "Login";
             // 
+            // closeApplication
+            // 
+            this.closeApplication.Image = ((System.Drawing.Image)(resources.GetObject("closeApplication.Image")));
+            this.closeApplication.Location = new System.Drawing.Point(763, 4);
+            this.closeApplication.Name = "closeApplication";
+            this.closeApplication.Size = new System.Drawing.Size(32, 32);
+            this.closeApplication.TabIndex = 23;
+            this.closeApplication.TabStop = false;
+            this.closeApplication.Click += new System.EventHandler(this.closeApplication_Click);
+            // 
+            // minimizeApplication
+            // 
+            this.minimizeApplication.Image = ((System.Drawing.Image)(resources.GetObject("minimizeApplication.Image")));
+            this.minimizeApplication.Location = new System.Drawing.Point(719, 4);
+            this.minimizeApplication.Name = "minimizeApplication";
+            this.minimizeApplication.Size = new System.Drawing.Size(38, 32);
+            this.minimizeApplication.TabIndex = 24;
+            this.minimizeApplication.TabStop = false;
+            this.minimizeApplication.Click += new System.EventHandler(this.minimizeApplication_Click);
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.minimizeApplication);
+            this.Controls.Add(this.closeApplication);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -183,11 +209,12 @@ namespace CourseworkAD
             this.Name = "LoginScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreen";
-          
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.closeApplication)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minimizeApplication)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,5 +233,7 @@ namespace CourseworkAD
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox closeApplication;
+        private System.Windows.Forms.PictureBox minimizeApplication;
     }
 }

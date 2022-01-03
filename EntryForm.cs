@@ -28,7 +28,7 @@ namespace CourseworkAD
         //This method autoIncrement the Id
         public void autoUpdateId() {
 
-            string[] data = File.ReadAllLines("F:\\Cw_Ad\\DataRecord.csv");
+            string[] data = File.ReadAllLines("F:\\Cw_Ad\\CSV files\\DataRecord.csv");
             int value = Convert.ToInt32(data.Length) + 1;
             idValue.Text = value++.ToString();
         }

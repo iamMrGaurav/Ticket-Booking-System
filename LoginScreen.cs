@@ -11,6 +11,8 @@ namespace CourseworkAD
             InitializeComponent();
         }
 
+
+
         //This method is for login button 
         private void loginButton_Click(object sender, EventArgs e)
         {
@@ -45,5 +47,17 @@ namespace CourseworkAD
         }
 
 
+        //This method closes the application on click
+        private void closeApplication_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        //This method minimizes the application on click
+        private void minimizeApplication_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -1,6 +1,7 @@
 F:\Cw_Ad\bin\Debug\CourseworkAD.exe.config
 F:\Cw_Ad\bin\Debug\CourseworkAD.exe
 F:\Cw_Ad\bin\Debug\CourseworkAD.pdb
+F:\Cw_Ad\obj\Debug\CourseworkAD.csproj.AssemblyReference.cache
 F:\Cw_Ad\obj\Debug\CourseworkAD.DailyReportForm.resources
 F:\Cw_Ad\obj\Debug\CourseworkAD.EntryForm.resources
 F:\Cw_Ad\obj\Debug\CourseworkAD.ExitForm.resources
